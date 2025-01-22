@@ -3,13 +3,13 @@
 ---
 
 <header>
-    <div class="header-container">
+    <div class="header-container wrapper">
         <div class="logo">
             <a href="/" title="Bani Bakery logo" aria-label="Logo image, a link to homepage">
                 <img src={textLogo.src} alt="Bani bakery logo" class="pics" />
             </a>
         </div>
-        <div class="nav">
+        <nav class="header-nav">
             <ul>
                 <li><a href="gallery.html">Gallery</a></li>
                 <li><a href="#sweetTable" class="navLink">Sweet Table</a></li>
@@ -17,6 +17,25 @@
                 <li><a href="#about" class="navLink">About</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
-        </div>
+        </nav>
     </div>
 </header>
+
+<style>
+    header{width: 100%;padding: 1rem 0;}
+    .header-container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .header-container nav ul li{
+        display: inline-block;
+        margin-right: 1.5rem;
+    }
+    .header-container nav ul li:last-child{margin-right: 0;}
+    .header-container nav ul li a{
+        text-decoration: none;
+        color: #000;
+        font-weight: 500;
+    }
+</style>
