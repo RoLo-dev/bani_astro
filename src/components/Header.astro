@@ -4,34 +4,45 @@
 
 <header>
     <div class="header-container wrapper">
-        <a href="/" title="Bani Bakery logo" class="logo" aria-label="Logo image, a link to homepage">
-            <img src={textLogo.src} alt="Bani bakery logo" class="pics" />
-        </a>
-        <nav class="header-nav">
-            <ul>
-                <li>
-                    <a tabindex="-1" href="" class="nav-link-anchor" title="Gallery link" aria-label="Link to gallery page">Gallery</a>
-                </li>
-                <li>
-                    <a tabindex="-1" href="" class="navLink nav-link-anchor" title="Sweet Table link" aria-label="Link to sweet table">Sweet Table Desserts</a>
-                </li>
-                <li>
-                    <a tabindex="-1" href="" class="navLink nav-link-anchor" title="Flavors & Fillings" aria-label="Link to flavors and fillings section">Flavors & Fillings</a>
-                </li>
-                <li>
-                    <a tabindex="-1" href="" title="About link" class="navLink nav-link-anchor" aria-label="Link to about section">About</a>
-                </li>
-                <li>
-                    <a tabindex="-1" href="" class="nav-link-anchor" title="Contact" aria-label="Link to contact section">Contact</a>
-                </li>
-                <!-- <li>
-                    <a tabindex="-1" href="" class="nav-link-anchor" title="Reviews link" aria-label="Link to reviews page">Reviews</a>
-                </li>
-                <li>
-                    <a tabindex="-1" href="" class="nav-link-anchor" title="Terms & Conditions link" aria-label="Link to terms and conditions pages">Terms & Conditions</a>
-                </li> -->
-            </ul>
-        </nav>
+        <div class="left-panel">
+            <a href="/" title="Bani Bakery logo" class="logo" aria-label="Logo image, a link to homepage">
+                <img src={textLogo.src} alt="Bani bakery logo" class="pics" />
+            </a>
+            <nav class="header-nav">
+                <ul>
+                    <li>
+                        <a tabindex="-1" href="" class="nav-link-anchor" title="Gallery link" aria-label="Link to gallery page">Gallery</a>
+                    </li>
+                    <li>
+                        <a tabindex="-1" href="" class="navLink nav-link-anchor" title="Sweet Table link" aria-label="Link to sweet table">Desserts</a>
+                    </li>
+                    <li>
+                        <a tabindex="-1" href="" class="navLink nav-link-anchor" title="Flavors & Fillings" aria-label="Link to flavors and fillings section">Flavors & Fillings</a>
+                    </li>
+                    <li>
+                        <a tabindex="-1" href="" title="About link" class="navLink nav-link-anchor" aria-label="Link to about section">About</a>
+                    </li>
+                    <li>
+                        <a tabindex="-1" href="" class="nav-link-anchor" title="Contact" aria-label="Link to contact section">Contact</a>
+                    </li>
+                    <!-- <li>
+                        <a tabindex="-1" href="" class="nav-link-anchor" title="Reviews link" aria-label="Link to reviews page">Reviews</a>
+                    </li>
+                    <li>
+                        <a tabindex="-1" href="" class="nav-link-anchor" title="Terms & Conditions link" aria-label="Link to terms and conditions pages">Terms & Conditions</a>
+                    </li> -->
+                </ul>
+            </nav>
+        </div>
+        <div class="right-panel">
+            <div class="social-media-container">
+                <a tabindex="-1" href="https://www.facebook.com/banibakery/" class="nav-link-anchor" aria-label="Link to facebook page" target="_blank"><i class="fab fa-facebook-square"></i></a>
+
+                <a tabindex="-1" href="https://www.instagram.com/banihouseofcakes/" class="nav-link-anchor" aria-label="Link to instagram page" target="_blank"><i class="fab fa-instagram"></i></a>
+
+                <a tabindex="-1" id="nav-yelp-link" class="nav-link-anchor" href="https://www.yelp.com/biz/bani-bakery-santa-ana" aria-label="Link to yelp page" target="_blank"><i class="fab fa-yelp"></i></a>
+            </div>
+        </div>
     </div>
 </header>
 
@@ -41,6 +52,11 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+    }
+    .header-container .left-panel{
+        display: flex;
+        align-items: center;
+        gap: 0 3rem;
     }
     .header-container nav ul li{
         display: inline-block;
@@ -68,5 +84,5 @@
         width: 100%;
         height: 2px;
     }
-    .header-container .logo{width: 250px;display: block;}
+    .header-container .logo{width: 200px;display: block;}
 </style>
