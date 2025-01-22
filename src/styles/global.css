@@ -28,7 +28,7 @@ html{
     background-color: var(--cream);
     scroll-behavior: smooth;
 }
-body{max-width: 1700px;margin: 0 auto;}
+/* body{max-width: 1700px;margin: 0 auto;} */
 .wrapper{
     width: 85%;
     margin: 0 auto;

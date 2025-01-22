@@ -1,14 +1,12 @@
 ---
-    import textLogo from '../assets/images/bani_logo_hor.svg';
+    import textLogo from '../assets/images/bani_logo_hor_bl.svg';
 ---
 
 <header>
     <div class="header-container wrapper">
-        <div class="logo">
-            <a href="/" title="Bani Bakery logo" aria-label="Logo image, a link to homepage">
-                <img src={textLogo.src} alt="Bani bakery logo" class="pics" />
-            </a>
-        </div>
+        <a href="/" title="Bani Bakery logo" class="logo" aria-label="Logo image, a link to homepage">
+            <img src={textLogo.src} alt="Bani bakery logo" class="pics" />
+        </a>
         <nav class="header-nav">
             <ul>
                 <li><a href="gallery.html">Gallery</a></li>
@@ -38,4 +36,5 @@
         color: #000;
         font-weight: 500;
     }
+    .header-container .logo{width: 250px;display: block;}
 </style>
