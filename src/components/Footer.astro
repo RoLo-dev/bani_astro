@@ -4,9 +4,60 @@
 
 <footer>
     <div class="footer-container wrapper">
-        <a href="" title="Bani Bakery logo" aria-label="Logo image, a link to homepage">
+        <a href="" title="Bani Bakery logo" aria-label="Logo image, a link to homepage" class="footer-logo">
             <img loading="lazy" src={textLogo.src} alt="Bani bakery logo" class="pics">
         </a>
+        <div class="ftLinks">
+            <h4>Bani Bakery</h4>
+            <ul>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="index.html#sweetTable" class="navLink">Sweet Table</a></li>
+                <li><a href="index.html#flavorFill" class="navLink">Flavors & Fillings</a></li>
+                <li><a href="index.html#about" class="navLink">About</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+                <li><a href="careers.html">Careers</a></li>
+                <li><a href="reviews.html">Reviews</a></li>
+                <li><a href="terms-conditions.html">Terms & Conditions</a></li>
+            </ul>
+            <h4 class="social">Social</h4>
+            <ul class="socialList">
+                <li>
+                    <a href="https://www.facebook.com/banibakery/" target="_blank"><i class="fab fa-facebook-square"></i></a>
+                </li>
+                <li>
+                    <a href="https://www.instagram.com/banihouseofcakes/" target="_blank"><i class="fab fa-instagram"></i></a>
+                </li>
+                <li>
+                    <a href="https://www.yelp.com/biz/bani-bakery-santa-ana" target="_blank"><i class="fab fa-yelp"></i></a>
+                </li>
+            </ul>
+        </div>
+        <div class="business-info">
+            <div class="store-hours">
+                <h4>Store Hours</h4>
+                <ul>
+                    <li>Mon - CLOSED</li>
+                    <li>Tue - CLOSED</li>
+                    <li>Wed - Fri: 10am - 6pm</li>
+                    <li>Sat - Sun: 9am - 4pm</li>
+                </ul>
+            </div>
+            <div class="business-contact">
+                <h4>Contact</h4>
+                <ul>
+                    <li>
+                        <a href="mailto:banibakery@gmail.com"> banibakery@gmail.com</a>
+                    </li>
+                    <li>
+                        <a href="tel:7142495911">(714) 249 - 5911</a>
+                    </li>
+                    <li>
+                        <a href="https://goo.gl/maps/XsePsz1xZJ2xge2i8" target="_blank">7561 Center Ave #7<br/> Huntington Beach, CA 92647</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
     </div>
 </footer>
 
@@ -14,5 +65,9 @@
     footer{
         background-color: var(--brown-color);
         padding: 1rem 0;
+    }
+    footer .footer-logo{
+        display: block;
+        width: 200px;
     }
 </style>
