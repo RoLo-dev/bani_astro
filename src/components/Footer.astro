@@ -59,8 +59,8 @@
                 <li>Sat - Sun: 9am - 4pm</li>
             </ul>
         </div>
-
     </div>
+    <p class="wrapper">&copy; <span id="footer-year"></span> Bani Bakery All Rights Reserved.</p>
 </footer>
 
 <style>
@@ -70,12 +70,13 @@
     }
     .footer-container .footer-logo{
         display: block;
-        width: 200px;
+        width: 250px;
     }
     .footer-container .footer-logo img{object-fit: contain;}
     .footer-container{
         display: flex;
         align-items: flex-start;
+        flex-wrap: wrap;
         justify-content: space-between;
         gap: 1rem 1.5rem;
     }
@@ -95,4 +96,20 @@
     }
     .footer-social ul li a{font-size: 1.25rem;}
     .footer-social ul li:last-child{margin-right: 0;}
+    footer p{
+        text-align: center;
+        color: #fff;
+        margin-top: 2rem;
+    }
 </style>
+
+<script>
+    let currentDay = new Date();
+    let year = currentDay.getFullYear();
+    let footerYear = document.getElementById('footer-year');
+
+    function updateYear() {
+        footerYear.innerText = year;
+    }
+    updateYear();
+</script>
