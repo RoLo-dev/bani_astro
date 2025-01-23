@@ -66,7 +66,7 @@
 <style>
     footer{
         background-color: var(--brown-color);
-        padding: 1rem 0;
+        padding: 2rem 0;
     }
     .footer-container .footer-logo{
         display: block;
@@ -75,11 +75,24 @@
     .footer-container .footer-logo img{object-fit: contain;}
     .footer-container{
         display: flex;
+        align-items: flex-start;
         justify-content: space-between;
         gap: 1rem 1.5rem;
     }
-    .footer-container a{
-        color: #000;
+    .footer-container a, .footer-container ul li{
+        color: #fff;
         text-decoration: none;
     }
+    .footer-container a:hover{color: var(--hot-pink);}
+    .footer-container ul li{margin-bottom: 7px;}
+    .footer-container ul li:last-child{margin-bottom: 0;}
+    .footer-container h4{margin-bottom: 12px;color: #fff;}
+    .footer-social{margin-top: 1rem;}
+    .footer-social ul li{
+        display: inline-block;
+        margin-right: 1rem;
+        margin-bottom: 0;
+    }
+    .footer-social ul li a{font-size: 1.25rem;}
+    .footer-social ul li:last-child{margin-right: 0;}
 </style>
