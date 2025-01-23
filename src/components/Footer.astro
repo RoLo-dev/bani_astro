@@ -109,7 +109,9 @@
     let footerYear = document.getElementById('footer-year');
 
     function updateYear() {
-        footerYear.innerText = year;
+        if(footerYear != null){
+            footerYear.innerText = year.toString();
+        }
     }
     updateYear();
 </script>
