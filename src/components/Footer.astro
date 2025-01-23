@@ -53,10 +53,18 @@
         <div class="store-hours">
             <h4>Store Hours</h4>
             <ul>
-                <li>Mon - CLOSED</li>
-                <li>Tue - CLOSED</li>
-                <li>Wed - Fri: 10am - 6pm</li>
-                <li>Sat - Sun: 9am - 4pm</li>
+                <li>
+                    <span>Mon - Tue:</span>
+                    <span>CLOSED</span>
+                </li>
+                <li>
+                    <span>Wed - Fri:</span>
+                    <span>10am - 6pm</span>
+                </li>
+                <li>
+                    <span>Sat - Sun:</span>
+                    <span>9am - 4pm</span>
+                </li>
             </ul>
         </div>
     </div>
@@ -88,6 +96,15 @@
     .footer-container ul li{margin-bottom: 7px;}
     .footer-container ul li:last-child{margin-bottom: 0;}
     .footer-container h4{margin-bottom: 12px;color: #fff;}
+    .footer-container .store-hours ul{
+        max-width: 250px;
+        min-width: 190px;
+    }
+    .footer-container .store-hours ul li{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
     .footer-social{margin-top: 1rem;}
     .footer-social ul li{
         display: inline-block;
