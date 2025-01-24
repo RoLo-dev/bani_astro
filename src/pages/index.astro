@@ -3,6 +3,10 @@
 	import Footer from '../components/Footer.astro';
 	import BakeryInfo from '../components/BakeryInfo.astro';
 	import Layout from '../layouts/Layout.astro';
+
+	import spcltyCard from '../assets/images/spclty-card.jpg';
+	import spcltyCard2 from '../assets/images/spclty-card2.jpg';
+	import spcltyCard3 from '../assets/images/spclty-card3.jpg';
 ---
 
 <Layout>
@@ -21,10 +25,27 @@
 
 	<section class="bakery-specialties wrapper">
 		<div class="card">
-			
+			<div class="img-container">
+				<img src={spcltyCard.src} class="pics" alt="Heart shaped cake">
+			</div>
+			<h3>Less sugar, healthy you</h3>
+			<p>Our cakes, pastries and creams contain a low amount of sugar and we always provide fresh fruit.</p>
 		</div>
-		<div class="card"></div>
-		<div class="card"></div>
+		<div class="card">
+			<div class="img-container">
+				<img src={spcltyCard3.src} class="pics" alt="Cakepops">
+			</div>
+			<h3>Need a sweet table?</h3>
+			<p>We have a wide variety of pastries that you can also custom design for your event. Stands and platters are available for rent.</p>
+			<a href="" class="pink-cta spclty-card-cta">View Desserts</a>
+		</div>
+		<div class="card">
+			<div class="img-container">
+				<img src={spcltyCard2.src} class="pics" alt="Under the sea cake">
+			</div>
+			<h3>Customize your cake</h3>
+			<p>Get creative with your cake, make it unique, provide a big surprise so you can leave behind a big impression and create memorable moments.</p>
+		</div>
 	</section>
 
 	<!-- <BakeryInfo /> -->
@@ -58,7 +79,7 @@
 		padding-right: 5rem;
 	}
 	.hero-text-container h1{
-		font-size: 3.75rem;
+		font-size: 4rem;
 		font-family: "DM Serif Display", serif;
 		font-weight: 400;
 		font-style: normal;
@@ -79,6 +100,33 @@
 		background-position: center;
 		background-size: cover;
 	}
+	.bakery-specialties{
+		margin-top: 4rem;
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		gap: 2rem 5.625rem;
+	}
+	.bakery-specialties .card{
+		min-width: 350px;
+		width: 29%;
+	}
+	.bakery-specialties .card .img-container{
+		height: 400px;
+		margin-bottom: 1.5rem;
+	}
+	.bakery-specialties .card h3{
+		font-family: "DM Serif Display", sans-serif;
+		text-align: center;
+		font-size: 1.75rem;
+		margin-bottom: 1rem;
+	}
+	.bakery-specialties .card .spclty-card-cta{
+		content: 'View Desserts';
+		margin: 1rem auto 0 auto;
+	}
+
+
 	.homepage-nav{
 		width: 100%;
 		padding: 2rem 0;
