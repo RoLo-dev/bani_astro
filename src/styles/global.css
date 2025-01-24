@@ -22,8 +22,10 @@
 }
 html{
     font-size: var(--font-size);
-    font-family: 'Muli', sans-serif;
+    font-family: "Red Hat Display", serif;
     font-weight: 300;
+    font-optical-sizing: auto;
+    font-style: normal;
     overflow-y: scroll;
     background-color: var(--cream);
     scroll-behavior: smooth;
