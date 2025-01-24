@@ -17,7 +17,7 @@
             <div class="hero-text-container">
                 <h1>Custom Cakes Made<br /> With Love</h1>
                 <p>Specializing in custom cakes and pastries, all freshly made by order. Provide us your cake design idea and we'll help you bring your cake to life.</p>
-                <a href="" class="pink-cta hero-cta">Get Started</a>
+                <a href="" class="pink-cta hero-cta" title="Get Started" aria-label="Get started link">Get Started</a>
             </div>
         </div>
         <div class="right-col col"></div>
@@ -37,7 +37,7 @@
 			</div>
 			<h3>Need a sweet table?</h3>
 			<p>We have a wide variety of pastries that you can also custom design for your event. Stands and platters are available for rent.</p>
-			<a href="" class="pink-cta spclty-card-cta">View Desserts</a>
+			<a href="" class="pink-cta spclty-card-cta" title="View Desserts" aria-label="View Desserts link">View Desserts</a>
 		</div>
 		<div class="card">
 			<div class="img-container">
@@ -50,20 +50,32 @@
 
 	<!-- <BakeryInfo /> -->
 
-	<div class="homepage-nav small-wrapper">
-        <ul>
-            <li>
-                <a tabindex="-1" href="" class="" title="Desserts link" aria-label="Link to desserts">Desserts</a>
-            </li>
-            <li>
-                <a tabindex="-1" href="" class="" title="Flavors" aria-label="Link to flavors section">Cake Flavors</a>
-            </li>
-            <li>
-                <a tabindex="-1" href="" class="" title="Fillings" aria-label="Link to fillings section">Cake Fillings</a>
-            </li>
-        </ul>
-		<a href="" class="homepage-nav-cta pink-cta">Place Order</a>
+	<div class="homepage-nav">
+		<div class="homepage-nav-container wrapper">
+			<ul>
+				<li>
+					<a tabindex="-1" href="" class="" title="Desserts link" aria-label="Link to desserts">Desserts</a>
+				</li>
+				<li>
+					<a tabindex="-1" href="" class="" title="Flavors" aria-label="Link to flavors section">Cake Flavors</a>
+				</li>
+				<li>
+					<a tabindex="-1" href="" class="" title="Fillings" aria-label="Link to fillings section">Cake Fillings</a>
+				</li>
+			</ul>
+			<a href="" title="Get a Quote" aria-label="Get a Quote link" class="homepage-nav-cta pink-cta">Get a Quote</a>
+		</div>
     </div>
+
+	<section id="desserts">
+		<div class="desserts-container list-container small-wrapper">
+			<div class="img-col">
+				<h2>Desserts</h2>
+			</div>
+			<div class="list-col"></div>
+		</div>
+
+	</section>
 
 	<Footer />
 </Layout>
@@ -80,9 +92,6 @@
 	}
 	.hero-text-container h1{
 		font-size: 4rem;
-		font-family: "DM Serif Display", serif;
-		font-weight: 400;
-		font-style: normal;
 		margin-bottom: 3rem;
 		line-height: 1.125;
 	}
@@ -100,6 +109,8 @@
 		background-position: center;
 		background-size: cover;
 	}
+
+	/* SPECLTY CARD SECTION STYLES */
 	.bakery-specialties{
 		margin-top: 4rem;
 		display: flex;
@@ -116,35 +127,42 @@
 		margin-bottom: 1.5rem;
 	}
 	.bakery-specialties .card h3{
-		font-family: "DM Serif Display", sans-serif;
 		text-align: center;
 		font-size: 1.75rem;
 		margin-bottom: 1rem;
 	}
-	.bakery-specialties .card .spclty-card-cta{
+	.bakery-specialties .card .spclty-card-cta::after{
 		content: 'View Desserts';
+	}
+	.bakery-specialties .card .spclty-card-cta{
 		margin: 1rem auto 0 auto;
 	}
 
-
+	/* HOMEPAGE NAV STYLES */
 	.homepage-nav{
+		position: sticky;
+		border-top: 1px solid var(--hot-pink);
+		border-bottom: 1px solid var(--hot-pink);
+		margin: 4rem 0;
+	}
+	.homepage-nav-container{
 		width: 100%;
-		padding: 2rem 0;
+		padding: 1.5rem 0;
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
 	}
-	.homepage-nav ul li{
+	.homepage-nav-container ul li{
 		display: inline-block;
 		margin-right: 1.75rem;
 	}
-	.homepage-nav ul li:last-child{margin-right: 0;}
-	.homepage-nav ul li a{
+	.homepage-nav-container ul li:last-child{margin-right: 0;}
+	.homepage-nav-container ul li a{
 		color: #000;
 		font-weight: 700;
 		position: relative;
 	}
-	.homepage-nav ul li a:after{
+	.homepage-nav-container ul li a:after{
         content: '';
         position: absolute;
         bottom: -3px;
@@ -155,11 +173,36 @@
         height: 0;
         transition: all 0.2s ease-in-out;
     }
-	.homepage-nav ul li a:hover:after{
+	.homepage-nav-container ul li a:hover:after{
         width: 100%;
         height: 2px;
     }
-	.homepage-nav .homepage-nav-cta::after{
-		content: 'Place Order';
+	.homepage-nav-container .homepage-nav-cta::after{
+		content: 'Get a Quote';
 	}
+
+	/* LIST SECTIONS STYLES */
+	.list-container{display: flex;}
+	.list-container .img-col{
+		width: 40%;
+		height: 400px;
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center;
+		position: relative;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+	.list-container .img-col h2{
+		font-size: 2.5rem;
+		background-color: var(--hot-pink);
+		padding: 3rem 1.75rem;
+		/* border-radius: 50px; */
+	}
+	.list-container .list-col{width: 60%;}
+	.desserts-container .img-col{
+		background-image: url('../assets/images/dessert-bkgd.jpg');
+	}
+
 </style>
