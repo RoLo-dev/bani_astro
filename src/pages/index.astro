@@ -1,7 +1,7 @@
 ---
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
-import Layout from '../layouts/Layout.astro';
+	import Header from '../components/Header.astro';
+	import Footer from '../components/Footer.astro';
+	import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout>
@@ -16,7 +16,9 @@ import Layout from '../layouts/Layout.astro';
             </div>
 
         </div>
-        <div class="right-col col"></div>
+        <div class="right-col col">
+			<!-- <img src={heroImage.src}  alt="Custom cake image"> -->
+		</div>
 	</div>
 
 	<div class="homepage-nav wrapper">
@@ -36,5 +38,14 @@ import Layout from '../layouts/Layout.astro';
 	<Footer />
 </Layout>
 <style>
+	.hero-section{display: flex;}
+	.hero-section .col{width: 50%;}
+	.hero-section .right-col{
+		height: 650px;
+		background-image: url('../assets/images/hero-image.jpeg');
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: cover;
+	}
 
 </style>
