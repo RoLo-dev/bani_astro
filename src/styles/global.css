@@ -23,7 +23,7 @@
 html{
     font-size: var(--font-size);
     font-family: "Red Hat Display", serif;
-    font-weight: 300;
+    font-weight: 400;
     font-optical-sizing: auto;
     font-style: normal;
     overflow-y: scroll;
@@ -48,3 +48,46 @@ html{
 }
 ul{list-style: none;}
 a{transition: all 0.2s ease-in-out;}
+.pink-cta{
+    background-color: var(--hot-pink);
+    text-decoration: none;
+    border-radius: 30px;
+    display: block;
+    max-width: 250px;
+    min-width: 200px;
+    padding: 1.125rem 0;
+    text-align: center;
+    color: transparent;
+    font-weight: 700;
+    letter-spacing: 1px;
+    position: relative;
+}
+.pink-cta::before{
+    content: '';
+    width: 0;
+    height: 100%;
+    border-radius: 30px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: var(--brown-color);
+    transition: all 0.3s ease-in;
+}
+.pink-cta::after{
+    content: 'Get Started';
+    color: #000;
+    width: 100%;
+    height: 100%;
+    border-radius: 30px;
+    position: absolute;
+    top: 30%;
+    left: 0;
+    transition: all 0.4s ease-in;
+}
+.pink-cta:hover::before{
+    width: 100%;
+}
+.pink-cta:hover::after{
+    width: 100%;
+    color: #fff;
+}
