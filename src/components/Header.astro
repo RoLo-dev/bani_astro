@@ -2,6 +2,12 @@
     import textLogo from '../assets/images/bani_logo_hor_bl.svg';
 ---
 
+<div class="alert-banner">
+    <div class="wrapper">
+        <p>No walk-ins, appointment only</p>
+        <button class="close-btn"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+</div>
 <header>
     <div class="header-container wrapper">
         <div class="left-panel">
@@ -35,16 +41,37 @@
             </nav>
         </div>
         <div class="right-panel">
-            <a tabindex="-1" href="https://www.facebook.com/banibakery/" class="nav-link-anchor" title="Facebook" aria-label="Link to facebook page" target="_blank"><i class="fab fa-facebook-square"></i></a>
+            <a tabindex="-1" href="https://www.facebook.com/banibakery/" class="nav-link-anchor" title="Facebook" aria-label="Link to facebook page" target="_blank"><i class="fa-brands fa-facebook"></i></a>
 
-            <a tabindex="-1" href="https://www.instagram.com/banihouseofcakes/" class="nav-link-anchor" title="Instagram" aria-label="Link to instagram page" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a tabindex="-1" href="https://www.instagram.com/banihouseofcakes/" class="nav-link-anchor" title="Instagram" aria-label="Link to instagram page" target="_blank"><i class="fa-brands fa-instagram"></i></a>
 
-            <a tabindex="-1" id="nav-yelp-link" class="nav-link-anchor" href="https://www.yelp.com/biz/bani-bakery-santa-ana" title="Yelp" aria-label="Link to yelp page" target="_blank"><i class="fab fa-yelp"></i></a>
+            <a tabindex="-1" id="nav-yelp-link" class="nav-link-anchor" href="https://www.yelp.com/biz/bani-bakery-santa-ana" title="Yelp" aria-label="Link to yelp page" target="_blank"><i class="fa-brands fa-yelp"></i></a>
         </div>
     </div>
 </header>
 
 <style>
+    .alert-banner{
+        width: 100%;
+        background-color: var(--hot-pink);
+        color: #000;
+        padding: 1rem 0;
+        text-align: center;
+    }
+    .alert-banner div{
+        position: relative;
+    }
+    .alert-banner .close-btn{
+        color: #000;
+        background: 0;
+        padding: 4px;
+        border: 0;
+        position: absolute;
+        right: 0;
+        top: 0;
+        transform: rotate(270deg);
+        font-size: 1.125rem;
+    }
     header{
         width: 100%;
         padding: 1.5rem 0;
