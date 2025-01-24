@@ -35,8 +35,8 @@ html{
     margin: 0 auto;
     max-width: 1700px;
 }
-.smaller-wrapper{
-    width: 65%;
+.small-wrapper{
+    width: 70%;
     margin: 0 auto;
     max-width: 1200px;
 }
@@ -47,7 +47,10 @@ html{
     object-fit: cover;
 }
 ul{list-style: none;}
-a{transition: all 0.2s ease-in-out;}
+a{
+    text-decoration: none;
+    transition: all 0.2s ease-in-out;
+}
 .pink-cta{
     background-color: var(--hot-pink);
     text-decoration: none;
@@ -55,7 +58,7 @@ a{transition: all 0.2s ease-in-out;}
     display: block;
     max-width: 250px;
     min-width: 200px;
-    padding: 1.125rem 0;
+    padding: 1rem 0;
     text-align: center;
     color: transparent;
     font-weight: 700;
@@ -74,7 +77,6 @@ a{transition: all 0.2s ease-in-out;}
     transition: all 0.3s ease-in;
 }
 .pink-cta::after{
-    content: 'Get Started';
     color: #000;
     width: 100%;
     height: 100%;

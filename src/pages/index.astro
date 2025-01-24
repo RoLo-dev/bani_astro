@@ -1,38 +1,42 @@
 ---
 	import Header from '../components/Header.astro';
 	import Footer from '../components/Footer.astro';
+	import BakeryInfo from '../components/BakeryInfo.astro';
 	import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout>
 	<Header />
 
-	<div class="hero-section wrapper">
+	<section class="hero-section wrapper">
 		<div class="left-col col">
             <div class="hero-text-container">
                 <h1>Custom Cakes Made<br /> With Love</h1>
                 <p>Specializing in custom cakes and pastries, all freshly made by order. Provide us your cake design idea and we'll help you bring your cake to life.</p>
-                <a href="" class="pink-cta">Get Started</a>
+                <a href="" class="pink-cta hero-cta">Get Started</a>
             </div>
 
         </div>
         <div class="right-col col">
 			<!-- <img src={heroImage.src}  alt="Custom cake image"> -->
 		</div>
-	</div>
+	</section>
 
-	<div class="homepage-nav wrapper">
+	<BakeryInfo />
+
+	<div class="homepage-nav small-wrapper">
         <ul>
             <li>
                 <a tabindex="-1" href="" class="" title="Desserts link" aria-label="Link to desserts">Desserts</a>
             </li>
             <li>
-                <a tabindex="-1" href="" class="" title="Flavors" aria-label="Link to flavors section">Flavors</a>
+                <a tabindex="-1" href="" class="" title="Flavors" aria-label="Link to flavors section">Cake Flavors</a>
             </li>
             <li>
-                <a tabindex="-1" href="" class="" title="Fillings" aria-label="Link to fillings section">Fillings</a>
+                <a tabindex="-1" href="" class="" title="Fillings" aria-label="Link to fillings section">Cake Fillings</a>
             </li>
         </ul>
+		<a href="" class="homepage-nav-cta pink-cta">Place Order</a>
     </div>
 
 	<Footer />
@@ -60,6 +64,9 @@
 		font-size: 1.25rem;
 		margin-bottom: 3rem;
 	}
+	.hero-text-container .hero-cta::after{
+		content: 'Get Started';
+	}
 	.hero-section .right-col{
 		height: 650px;
 		background-image: url('../assets/images/hero-image.jpeg');
@@ -67,5 +74,39 @@
 		background-position: center;
 		background-size: cover;
 	}
-
+	.homepage-nav{
+		width: 100%;
+		padding: 2rem 0;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+	.homepage-nav ul li{
+		display: inline-block;
+		margin-right: 1.75rem;
+	}
+	.homepage-nav ul li:last-child{margin-right: 0;}
+	.homepage-nav ul li a{
+		color: #000;
+		font-weight: 700;
+		position: relative;
+	}
+	.homepage-nav ul li a:after{
+        content: '';
+        position: absolute;
+        bottom: -3px;
+        height: 2px;
+        left: 0;
+        background-color: var(--hot-pink);
+        width: 0;
+        height: 0;
+        transition: all 0.2s ease-in-out;
+    }
+	.homepage-nav ul li a:hover:after{
+        width: 100%;
+        height: 2px;
+    }
+	.homepage-nav .homepage-nav-cta::after{
+		content: 'Place Order';
+	}
 </style>
