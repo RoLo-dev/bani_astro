@@ -33,7 +33,7 @@
 		</div>
 		<div class="card">
 			<div class="img-container">
-				<img src={spcltyCard3.src} class="pics" alt="Cakepops">
+				<img src={spcltyCard3.src} class="pics" alt="Cake pops">
 			</div>
 			<h3>Need a sweet table?</h3>
 			<p>We have a wide variety of pastries that you can also custom design for your event. Stands and platters are available for rent.</p>
@@ -72,7 +72,99 @@
 			<div class="img-col">
 				<h2>Desserts</h2>
 			</div>
-			<div class="list-col"></div>
+			<div class="list-col">
+				<ul>
+					<li>Mini Cupcakes</li>
+					<li>Cupcakes</li>
+					<li>Cake Pops</li>
+					<li>Oreo Pops</li>
+					<li>Strawberry Tart</li>
+					<li>Macarons</li>
+					<li>Brownie Bites</li>
+					<li>Rice Krispy Treats</li>
+					<li>Choux Small</li>
+					<li>Pretzel Sticks</li>
+					<li>Tiramisu Cups</li>
+					<li>Creme Brulee</li>
+					<li>Mini Fruitarts</li>
+					<li>Cookie Cream Shooters</li>
+					<li>Strawberry Shooters</li>
+					<li>Banana Cream Pie</li>
+					<li>Key Lime Parfait</li>
+					<li>Tropical Cups</li>
+					<li>Mini Cheesecake</li>
+					<li>Oatmeal Raisin Cookies</li>
+					<li>Peanut Butter Cookies</li>
+					<li>Chocolate Chip Cookies</li>
+					<li>Chocolate Dipped Strawberries</li>
+				</ul>
+				<p>* Additional charge of $0.50 each item for bags and bows</p>
+				<p>* Minimum 1 dozen per item</p>
+				<p>* Orders have to be placed 4 days in advance</p>
+			</div>
+		</div>
+		<div class="small-wrapper list-container flavors-container">
+			<div class="list-col">
+				<ul>
+					<li>Vanilla</li>
+					<li>Chocolate</li>
+					<li>Marble</li>
+					<li>Strawberry</li>
+					<li>Lemon</li>
+					<li>Lemon Strawberry (contains real fruits)</li>
+					<li>Almond (contains tree nuts)</li>
+					<li>Funfetti</li>
+					<li>Cookies & Cream</li>
+					<li>Yellow Chocolate Chips</li>
+					<li>Hazelnut Swirls (contains tree nuts)</li>
+					<li>Matcha Swirls</li>
+					<li class="bold">Red Velvet *</li>
+					<li class="bold">Coconut *</li>
+					<li class="bold">Banana * (with banana chunks)</li>
+					<li class="bold">Carrot * (with carrot shavings)</li>
+					<li class="bold">Pandan *</li>
+				</ul>
+				<p>* Additional charge for special flavor</p>
+			</div>
+			<div class="img-col">
+				<h2>Flavors</h2>
+			</div>
+		</div>
+		<div class="desserts-container list-container small-wrapper">
+			<div class="img-col">
+				<h2>Fillings</h2>
+			</div>
+			<div class="list-col">
+				<ul>
+					<li>Lemon mousse</li>
+					<li>Whipped cream ***</li>
+					<li>Cake Pops</li>
+					<li>Oreo Pops</li>
+					<li>Strawberry Tart</li>
+					<li>Macarons</li>
+					<li>Brownie Bites</li>
+					<li>Rice Krispy Treats</li>
+					<li>Choux Small</li>
+					<li>Pretzel Sticks</li>
+					<li>Tiramisu Cups</li>
+					<li>Creme Brulee</li>
+					<li>Mini Fruitarts</li>
+					<li>Cookie Cream Shooters</li>
+					<li>Strawberry Shooters</li>
+					<li>Banana Cream Pie</li>
+					<li>Key Lime Parfait</li>
+					<li>Tropical Cups</li>
+					<li>Mini Cheesecake</li>
+					<li>Oatmeal Raisin Cookies</li>
+					<li>Peanut Butter Cookies</li>
+					<li>Chocolate Chip Cookies</li>
+					<li>Chocolate Dipped Strawberries</li>
+				</ul>
+				<p>* Additional charge for special filling</p>
+				<p>* Heavily colored buttercream like Black or Red, will temporarily stain your teeth and change cream flavor</p>
+				<p>** Italian buttercream made with real butter and less sugar, not so sweet</p>
+				<p>*** Non-dairy, airy cream, very light, and sweet</p>
+			</div>
 		</div>
 
 	</section>
@@ -184,8 +276,8 @@
 	/* LIST SECTIONS STYLES */
 	.list-container{display: flex;}
 	.list-container .img-col{
-		width: 40%;
-		height: 400px;
+		width: 35%;
+		height: 475px;
 		background-repeat: no-repeat;
 		background-size: cover;
 		background-position: center;
@@ -198,11 +290,24 @@
 		font-size: 2.5rem;
 		background-color: var(--hot-pink);
 		padding: 3rem 1.75rem;
-		/* border-radius: 50px; */
 	}
-	.list-container .list-col{width: 60%;}
+	.list-container .list-col{padding-left: 2.5rem;}
+	.list-container .list-col ul{
+		column-count: 2;
+		margin-bottom: 2rem;
+	}
+	.list-container .list-col ul li{
+		margin-bottom: 7px;
+		font-size: 1.125rem;
+	}
+	.list-container .list-col{width: 65%;}
 	.desserts-container .img-col{
 		background-image: url('../assets/images/dessert-bkgd.jpg');
 	}
+	.flavors-container .img-col{
+		background-image: url('../assets/images/flavor-bkgd.jpg');
+	}
+	.list-container{margin-bottom: 3rem;}
+	/* .list-container:last-of-type{margin-bottom: 0;} */
 
 </style>
