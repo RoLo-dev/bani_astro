@@ -50,24 +50,24 @@
 
 	<!-- <BakeryInfo /> -->
 
-	<div class="homepage-nav">
-		<div class="homepage-nav-container wrapper">
-			<ul>
-				<li>
-					<a tabindex="-1" href="" class="" title="Desserts link" aria-label="Link to desserts">Desserts</a>
-				</li>
-				<li>
-					<a tabindex="-1" href="" class="" title="Flavors" aria-label="Link to flavors section">Cake Flavors</a>
-				</li>
-				<li>
-					<a tabindex="-1" href="" class="" title="Fillings" aria-label="Link to fillings section">Cake Fillings</a>
-				</li>
-			</ul>
-			<a href="" title="Get a Quote" aria-label="Get a Quote link" class="homepage-nav-cta pink-cta">Get a Quote</a>
+	<section id="list-section">
+		<div class="homepage-nav">
+			<div class="homepage-nav-container wrapper">
+				<ul>
+					<li>
+						<a tabindex="-1" href="" class="" title="Desserts link" aria-label="Link to desserts">Desserts</a>
+					</li>
+					<li>
+						<a tabindex="-1" href="" class="" title="Flavors" aria-label="Link to flavors section">Cake Flavors</a>
+					</li>
+					<li>
+						<a tabindex="-1" href="" class="" title="Fillings" aria-label="Link to fillings section">Cake Fillings</a>
+					</li>
+				</ul>
+				<a href="" title="Get a Quote" aria-label="Get a Quote link" class="homepage-nav-cta pink-cta">Get a Quote</a>
+			</div>
 		</div>
-    </div>
 
-	<section id="desserts">
 		<div class="desserts-container list-container small-wrapper">
 			<div class="img-col">
 				<h2>Desserts</h2>
@@ -130,35 +130,32 @@
 				<h2>Flavors</h2>
 			</div>
 		</div>
-		<div class="desserts-container list-container small-wrapper">
+		<div class="fillings-container list-container small-wrapper">
 			<div class="img-col">
 				<h2>Fillings</h2>
 			</div>
 			<div class="list-col">
 				<ul>
-					<li>Lemon mousse</li>
-					<li>Whipped cream ***</li>
-					<li>Cake Pops</li>
-					<li>Oreo Pops</li>
-					<li>Strawberry Tart</li>
-					<li>Macarons</li>
-					<li>Brownie Bites</li>
-					<li>Rice Krispy Treats</li>
-					<li>Choux Small</li>
-					<li>Pretzel Sticks</li>
-					<li>Tiramisu Cups</li>
-					<li>Creme Brulee</li>
-					<li>Mini Fruitarts</li>
+					<li>Lemon Mousse</li>
+					<li>Whipped Cream ***</li>
+					<li>Pineapple Cream (contains real fruit)</li>
+					<li>Chocolate Buttercream **</li>
+					<li>Tiramisu Cream</li>
+					<li>Strawberry Mousse</li>
+					<li>Raspberry Mousse</li>
+					<li>Mango Mousse</li>
+					<li>Cappuccino Mousse</li>
+					<li>Chocolate Mousse</li>
+					<li>Cookies & Cream</li>
+					<li>Coconut Cream</li>
 					<li>Cookie Cream Shooters</li>
-					<li>Strawberry Shooters</li>
-					<li>Banana Cream Pie</li>
-					<li>Key Lime Parfait</li>
-					<li>Tropical Cups</li>
-					<li>Mini Cheesecake</li>
-					<li>Oatmeal Raisin Cookies</li>
-					<li>Peanut Butter Cookies</li>
-					<li>Chocolate Chip Cookies</li>
-					<li>Chocolate Dipped Strawberries</li>
+					<li>Passion Fruit Cream</li>
+					<li>Green Tea Cream</li>
+					<li>Banana Cream (contains real fruit)</li>
+					<li>Fresh Fruit * (contains real fruit)</li>
+					<li>Cream Cheese *</li>
+					<li>Chocolate Ganache *</li>
+					<li>Durian cream * (contains real fruit)</li>
 				</ul>
 				<p>* Additional charge for special filling</p>
 				<p>* Heavily colored buttercream like Black or Red, will temporarily stain your teeth and change cream flavor</p>
@@ -231,11 +228,17 @@
 	}
 
 	/* HOMEPAGE NAV STYLES */
+	#list-section{position: relative;}
 	.homepage-nav{
 		position: sticky;
+		background-color: var(--cream);
 		border-top: 1px solid var(--hot-pink);
 		border-bottom: 1px solid var(--hot-pink);
 		margin: 4rem 0;
+		width: 100%;
+		top: 0;
+		left: 0;
+		z-index: 10;
 	}
 	.homepage-nav-container{
 		width: 100%;
@@ -306,6 +309,9 @@
 	}
 	.flavors-container .img-col{
 		background-image: url('../assets/images/flavor-bkgd.jpg');
+	}
+	.fillings-container .img-col{
+		background-image: url('../assets/images/filling-bkgd.jpg');
 	}
 	.list-container{margin-bottom: 3rem;}
 	/* .list-container:last-of-type{margin-bottom: 0;} */
