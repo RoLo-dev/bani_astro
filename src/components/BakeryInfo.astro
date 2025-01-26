@@ -1,13 +1,13 @@
 <section class="bakery-info">
     <div class="wrapper info-container">
         <div class="col bakery-sub-container">
-            <h2>Bakery Info</h2>
             <div class="inner-col">
+                <h2>Bakery Info</h2>
                 <h3 id="current-storeHours"></h3>
                 <a style="display: block;margin-bottom: 1rem;width: 350px;" href="https://goo.gl/maps/XsePsz1xZJ2xge2i8" aria-label="Location address 7561 Center Avenue Suite 7, Huntington Beach, CA 92647">7561 Center Ave Suite 7,<br />Huntington Beach, CA 92647</a>
 
-                <p><span class="bold">Phone:</span> <a href="tel:7142495911" aria-label="Phone number 7142495911">(714) 249 - 5911</a></p>
-                <p><span class="bold">Email:</span> <a href="mailto:banibakery@gmail.com" aria-label="Email to banibakery@gmail.com">banibakery@gmail.com</a></p>
+                <p><span class="bold" style="padding-right: 7px;">Phone:</span> <a href="tel:7142495911" aria-label="Phone number 7142495911">(714) 249 - 5911</a></p>
+                <p><span class="bold" style="padding-right: 7px;">Email:</span> <a href="mailto:banibakery@gmail.com" aria-label="Email to banibakery@gmail.com">banibakery@gmail.com</a></p>
 
                 <p style="margin-top: 1rem;">No Walk-Ins, Appointment Only</p>
                 <p>Please give us a call for availability</p>
@@ -45,7 +45,7 @@
     .bakery-sub-container{
         width: calc(100% - 400px);
         display: flex;
-        flex-wrap: wrap;
+        align-items: center;
         justify-content: space-between;
     }
     .info-container .map{
@@ -64,7 +64,7 @@
         width: 100%;
     }
     .bakery-sub-container .inner-col ul li{
-        margin-bottom: 7px;
+        margin-bottom: 4px;
         display: flex;
         justify-content: space-between;
     }
@@ -73,5 +73,118 @@
     }
 </style>
 <script>
+    // CURRENT HOURS
+    var sunday = '9:00AM - 4:00PM';
+    var monday = 'CLOSED';
+    // var tuesday = '9:00AM - 4:00PM';
+    var tuesday = 'CLOSED';
+    var wednesday = '10:00AM - 6:00PM';
+    var thursday = '10:00AM - 6:00PM';
+    var friday = '10:00AM - 6:00PM';
+    var saturday = '9:00AM - 4:00PM';
+    var hoursPlaceholder = document.getElementById('current-storeHours');
+    var timeString;
+    var startHours;
+    var endHours;
+    var startMinutes;
+    var endMinutes;
+    var date = new Date();
+    var today = date.getDay();
 
+
+    switch(today){
+        case 0:
+            document.querySelector('.sunday').classList.toggle('bold')
+            timeString = sunday.split('-');
+            break;
+        case 1:
+            document.querySelector('.monday').classList.toggle('bold')
+            timeString = 'Store Closed';
+            hoursPlaceholder.innerHTML = 'Currently Closed';
+            hoursPlaceholder.style.color = 'red';
+            break;
+        case 2:
+            document.querySelector('.tuesday').classList.toggle('bold')
+            // timeString = tuesday.split('-');
+            timeString = 'Store Closed';
+            // hoursPlaceholder.innerHTML = 'Appointment Only';
+            hoursPlaceholder.innerHTML = 'Currently Closed';
+            hoursPlaceholder.style.color = 'red';
+            break;
+        case 3:
+            document.querySelector('.wednesday').classList.toggle('bold')
+            timeString = wednesday.split('-');
+            break;
+        case 4:
+            document.querySelector('.thursday').classList.toggle('bold')
+            timeString = thursday.split('-');
+            break;
+        case 5:
+            document.querySelector('.friday').classList.toggle('bold')
+            timeString = friday.split('-');
+            break;
+        case 6:
+            document.querySelector('.saturday').classList.toggle('bold')
+            timeString = saturday.split('-');
+            break;
+    }
+    if(timeString[0].search('AM') > -1 || timeString[0].search('am') > -1){
+        startHours = parseInt(timeString[0].substr(0,2), 10);
+        if (startHours == '12') {
+            startHours = 0;
+        }
+        startMinutes = parseInt(timeString[0].substr(3,2), 10)
+    } else {
+        startHours = parseInt(timeString[0].substr(0,2), 10) + 12;
+        if (startHours == '24') {
+            startHours = 12;
+        }
+        startMinutes = parseInt(timeString[0].substr(3,2), 10)
+    }
+
+    if (timeString[1].search('AM') > -1 || timeString[1].search('am') > -1) {
+        endHours = parseInt(timeString[1].substr(0,2), 10);
+        if (endHours == '12') {
+            endHours = 0;
+        }
+        endMinutes = parseInt(timeString[1].substr(3,2), 10)
+    }
+    else {
+        endHours = parseInt(timeString[1].substr(0,2), 10) + 12;
+        if (endHours == '24') {
+            endHours = 12;
+        }
+        endMinutes = parseInt(timeString[1].substr(3,2), 10)
+    }
+
+    var startDate = new Date(date.getFullYear(), date.getMonth(), date.getDate(),startHours, startMinutes);
+    var endDate = new Date(date.getFullYear(), date.getMonth(), date.getDate(),endHours, endMinutes);
+
+    function formatAMPM(date) {
+        var hours = date.getHours();
+        var minutes = date.getMinutes();
+        var ampm = hours >= 12 ? 'PM' : 'AM';
+        hours = hours % 12;
+        hours = hours ? hours : 12;
+        minutes = minutes < 10 ? '0'+minutes : minutes;
+        var strTime = hours + ':' + minutes + ' ' + ampm;
+        return strTime;
+    }
+
+    if (date < startDate) {
+        hoursPlaceholder.innerHTML = "Closed, open at " + formatAMPM(startDate);
+        hoursPlaceholder.style.color = '#F7ACB8';
+    }
+    else if (date > startDate && date < endDate) {
+        hoursPlaceholder.innerHTML = "Open until " + formatAMPM(endDate);
+        hoursPlaceholder.style.color = 'rgb(133, 255, 133)';
+    }
+    else if (date > startDate && date > endDate && startDate > endDate) {
+        hoursPlaceholder.innerHTML = "Open until " + formatAMPM(endDate);
+        hoursPlaceholder.style.color = 'rgb(133, 255, 133)';
+    }
+    else if (date > endDate) {
+        hoursPlaceholder.innerHTML = "Closed now";
+        hoursPlaceholder.style.color = '#F7ACB8';
+    }
 </script>
