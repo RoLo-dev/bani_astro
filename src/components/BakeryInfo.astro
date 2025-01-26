@@ -1,34 +1,32 @@
 <section class="bakery-info">
     <div class="wrapper info-container">
-        <div class="col">
-            <div class="bakery-sub-container">
-                <h2 class="inner-col">Bakery Info</h2>
-                <div class="inner-col">
-                    <h3 id="current-storeHours"></h3>
-                    <a style="display: block;margin-bottom: 1rem;width: 350px;" href="https://goo.gl/maps/XsePsz1xZJ2xge2i8" aria-label="Location address 7561 Center Avenue Suite 7, Huntington Beach, CA 92647">7561 Center Ave Suite 7,<br />Huntington Beach, CA 92647</a>
-    
-                    <p><span class="bold">Phone:</span> <a href="tel:7142495911" aria-label="Phone number 7142495911">(714) 249 - 5911</a></p>
-                    <p><span class="bold">Email:</span> <a href="mailto:banibakery@gmail.com" aria-label="Email to banibakery@gmail.com">banibakery@gmail.com</a></p>
-    
-                    <p style="margin-top: 1rem;">No Walk-Ins, Appointment Only</p>
-                    <p>Please give us a call for availability</p>
-                </div>
-                <div class="inner-col">
-                    <h3>Bakery Hours</h3>
-                    <ul>
-                        <li class="sunday"><span>Sunday:</span><span> 9am - 4pm</span></li>
-                        <li class="monday"><span>Monday:</span><span> CLOSED</span></li>
-                        <li class="tuesday"><span>Tuesday:</span><span> CLOSED</span></li>
-                        <li class="wednesday"><span>Wednesday:</span><span> 10am - 6pm</span></li>
-                        <li class="thursday"><span>Thursday:</span><span> 10am - 6pm</span></li>
-                        <li class="friday"><span>Friday:</span><span> 10am - 6pm</span></li>
-                        <li class="saturday"><span>Saturday:</span><span> 9am - 4pm</span></li>
-                    </ul>
-                </div>
+        <div class="col bakery-sub-container">
+            <h2>Bakery Info</h2>
+            <div class="inner-col">
+                <h3 id="current-storeHours"></h3>
+                <a style="display: block;margin-bottom: 1rem;width: 350px;" href="https://goo.gl/maps/XsePsz1xZJ2xge2i8" aria-label="Location address 7561 Center Avenue Suite 7, Huntington Beach, CA 92647">7561 Center Ave Suite 7,<br />Huntington Beach, CA 92647</a>
+
+                <p><span class="bold">Phone:</span> <a href="tel:7142495911" aria-label="Phone number 7142495911">(714) 249 - 5911</a></p>
+                <p><span class="bold">Email:</span> <a href="mailto:banibakery@gmail.com" aria-label="Email to banibakery@gmail.com">banibakery@gmail.com</a></p>
+
+                <p style="margin-top: 1rem;">No Walk-Ins, Appointment Only</p>
+                <p>Please give us a call for availability</p>
+            </div>
+            <div class="inner-col">
+                <h3>Bakery Hours</h3>
+                <ul>
+                    <li class="sunday"><span>Sunday:</span><span> 9am - 4pm</span></li>
+                    <li class="monday"><span>Monday:</span><span> CLOSED</span></li>
+                    <li class="tuesday"><span>Tuesday:</span><span> CLOSED</span></li>
+                    <li class="wednesday"><span>Wednesday:</span><span> 10am - 6pm</span></li>
+                    <li class="thursday"><span>Thursday:</span><span> 10am - 6pm</span></li>
+                    <li class="friday"><span>Friday:</span><span> 10am - 6pm</span></li>
+                    <li class="saturday"><span>Saturday:</span><span> 9am - 4pm</span></li>
+                </ul>
             </div>
         </div>
-        <div class="col">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3317.988213683548!2d-117.99723!3d33.7351209!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80dcd80b68bcd7c1%3A0x595e516c978318ea!2sBani%20Bakery!5e0!3m2!1sen!2sus!4v1692381702931!5m2!1sen!2sus" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <div class="map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3317.988213683548!2d-117.99723!3d33.7351209!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80dcd80b68bcd7c1%3A0x595e516c978318ea!2sBani%20Bakery!5e0!3m2!1sen!2sus!4v1692381702931!5m2!1sen!2sus" style="border:0;;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
     </div>
 </section>
@@ -36,36 +34,42 @@
 <style>
     .bakery-info{
         margin-top: 4rem;
-        padding: 3rem 0;
         background-color: var(--brown);
         color: var(--cream);
-        position: relative;
     }
-    .bakery-info h2{margin-bottom: 1.5rem;}
+    .bakery-info .info-container{
+        display: flex;
+        align-items: center;
+    }
     .bakery-info a{color: var(--cream);}
     .bakery-sub-container{
-
+        width: calc(100% - 400px);
         display: flex;
+        flex-wrap: wrap;
         justify-content: space-between;
     }
-    .bakery-sub-container .col{width: 50%;}
-    .bakery-sub-container .col h3{margin-bottom: 12px;}
-    .bakery-sub-container .col ul{
+    .info-container .map{
+        width: 450px;
+        height: 400px;
+    }
+    .info-container .map iframe{
+        width: 100%;
+        height: 100%;
+    }
+    .bakery-sub-container .inner-col{width: 50%;}
+    .bakery-sub-container h2{width: 100%;margin-bottom: 1.5rem;}
+    .bakery-sub-container .inner-col h3{margin-bottom: 12px;}
+    .bakery-sub-container .inner-col ul{
         max-width: 300px;
         width: 100%;
     }
-    .bakery-sub-container .col ul li{
+    .bakery-sub-container .inner-col ul li{
         margin-bottom: 7px;
         display: flex;
         justify-content: space-between;
     }
-    .bakery-sub-container .col ul li:last-child{
+    .bakery-sub-container .inner-col ul li:last-child{
         margin-bottom: 0;
-    }
-    .bakery-sub-container .col iframe{
-        height: 100%;
-        width: 100%;
-        height: 300px;
     }
 </style>
 <script>
