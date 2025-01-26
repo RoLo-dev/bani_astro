@@ -1,6 +1,6 @@
 :root{
     --font-size: 16px;
-    --brown-color: #814d3b;
+    --brown: #814d3b;
     --hot-pink: #F7ACB8;
     --cream: #fff8e8
 }
@@ -35,6 +35,7 @@ h1, h2, h3{
     font-weight: 400;
     font-style: normal;
 }
+h2{font-size: 2.5rem;}
 .wrapper{
     width: 85%;
     margin: 0 auto;
@@ -78,7 +79,7 @@ a{
     position: absolute;
     top: 0;
     left: 0;
-    background-color: var(--brown-color);
+    background-color: var(--brown);
     transition: all 0.3s ease-in;
 }
 .pink-cta::after{
