@@ -43,9 +43,9 @@ a{
     transition: all 0.2s ease-in-out;
 }
 .wrapper{
-    width: 80%;
+    width: 78%;
     margin: 0 auto;
-    max-width: 1700px;
+    max-width: 1600px;
 }
 .small-wrapper{
     width: 70%;
