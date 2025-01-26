@@ -28,23 +28,34 @@
 			<div class="img-container">
 				<img src={spcltyCard.src} class="pics" alt="Heart shaped cake">
 			</div>
-			<h3>Less sugar, healthy you</h3>
-			<p>Our cakes, pastries and creams contain a low amount of sugar and we always provide fresh fruit.</p>
+			<div class="card-text-container">
+				<h3>Less sugar, healthy you</h3>
+				<p>Our cakes, pastries and creams contain a low amount of sugar and we always provide fresh fruit.</p>
+				<div class="card-cta-container">
+					<a href="#flavors" class="pink-cta flavors-cta" title="Cake Flavors" aria-label="Cake Flavors link">Cake Flavors</a>
+					<a href="#fillings" class="pink-cta fillings-cta" title="Cake Fillings" aria-label="Cake Fillings link">Cake Fillings</a>
+				</div>
+			</div>
 		</div>
 		<div class="card">
 			<div class="img-container">
 				<img src={spcltyCard3.src} class="pics" alt="Cake pops">
 			</div>
-			<h3>Need a sweet table?</h3>
-			<p>We have a wide variety of pastries that you can also custom design for your event. Stands and platters are available for rent.</p>
-			<a href="#desserts" class="pink-cta spclty-card-cta" title="View Desserts" aria-label="View Desserts link">View Desserts</a>
+			<div class="card-text-container">
+				<h3>Need a sweet table?</h3>
+				<p>We have a wide variety of pastries that you can also custom design for your event. Stands and platters are available for rent.</p>
+				<a href="#desserts" class="pink-cta desserts-cta spclty-card-cta" title="View Desserts" aria-label="View Desserts link">View Desserts</a>
+			</div>
 		</div>
 		<div class="card">
 			<div class="img-container">
 				<img src={spcltyCard2.src} class="pics" alt="Under the sea cake">
 			</div>
-			<h3>Customize your cake</h3>
-			<p>Get creative with your cake, make it unique, provide a big surprise so you can leave behind a big impression and create memorable moments.</p>
+			<div class="card-text-container">
+				<h3>Customize your cake</h3>
+				<p>Get creative with your cake, make it unique, provide a big surprise so you can leave behind a big impression and create memorable moments.</p>
+				<a href="#contact" class="pink-cta quote-cta spclty-card-cta" title="Get a Quote" aria-label="Get a Quote link">Get a Quote</a>
+			</div>
 		</div>
 	</section>
 
@@ -215,20 +226,40 @@
 		height: 400px;
 		margin-bottom: 1.5rem;
 	}
+	.bakery-specialties .card .card-text-container{
+		min-height: 205px;
+		max-height: 250px;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+	}
+	.bakery-specialties .card .card-cta-container{
+		margin-top: 1.25rem;
+		display: flex;
+		justify-content: space-between;
+	}
 	.bakery-specialties .card h3{
 		text-align: center;
 		font-size: 1.75rem;
 		margin-bottom: 1rem;
 	}
-	.bakery-specialties .card .spclty-card-cta::after{
+	.bakery-specialties .card .flavors-cta::after{
+		content: 'Cake Flavors';
+	}
+	.bakery-specialties .card .fillings-cta::after{
+		content: 'Cake Fillings';
+	}
+	.bakery-specialties .card .desserts-cta::after{
 		content: 'View Desserts';
 	}
+	.bakery-specialties .card .quote-cta::after{
+		content: 'Get a Quote';
+	}
 	.bakery-specialties .card .spclty-card-cta{
-		margin: 1rem auto 0 auto;
+		margin: 1.25rem auto 0 auto;
 	}
 
 	/* HOMEPAGE NAV STYLES */
-	#list-section{position: relative;}
 	.homepage-nav{
 		position: sticky;
 		background-color: var(--cream);
@@ -277,9 +308,14 @@
 	}
 
 	/* LIST SECTIONS STYLES */
+	#list-section{
+		position: relative;
+		margin-top: 3rem;
+		margin-bottom: 3rem;
+	}
 	.list-container{
 		display: flex;
-		padding: 3rem 0;
+		padding: 2rem 0;
 	}
 	.list-container .img-col{
 		width: 35%;
