@@ -178,13 +178,45 @@
 	</section>
 
 	<section id="about">
-		<div class="wrapper about-container">
+		<div class="small-wrapper about-container">
 			<div class="col text-container">
 				<h2>About</h2>
 				<p>My name is Bani Dao, I started cake decorating in 2009, searching on YouTube for tutorials. After 2 years of being a home baker making cakes for family and friends, I decided to take it further by turning it to a profession. In 2011, I graduated from Le Cordon Bleu in Baking and Patisserie. Since then, I've been working in several bakeries as a pastry cook and cake decorator to gain real-life experience and knowledge about my field. From hobby to business, I continue baking cakes, pastries and now catering to the Orange County residents. Cake design has become my passion in life, so I always keep up to date with new and upcoming trends and try out new techniques to continue to improve and refine my skills.
 				</p>
 			</div>
 			<div class="col img-container"></div>
+		</div>
+	</section>
+
+	<section id="getting-started">
+		<div class="wrapper">
+			<h2>Getting Started</h2>
+			<div class="mini-card-container">
+				<div class="mini-card">
+					<h3>No Walk-Ins</h3>
+					<p>Please call or email us to schedule an appointment/availability for in person inquiries.</p>
+				</div>
+				<div class="mini-card">
+					<h3>Placing your Order</h3>
+					<p>Everything is made to order so we ask to place your orders <span class="bold">7 days in advance</span>. We also ask to provide images of the cake design you'd like and the amount of servings/guests to determine the size of the cake and price.</p>
+				</div>
+				<div class="mini-card">
+					<h3>Pricing</h3>
+					<p>Pricing is based on the design of the cake and if any specialty fillings selected.</p>
+				</div>
+				<div class="mini-card">
+					<h3>Deposit</h3>
+					<p>We require a 50% deposit of the total amount of the order for all orders. Any order that has no deposit will be put on hold, no deposit no cake. Deposits can be placed using Venmo or Zelle.</p>
+				</div>
+				<div class="mini-card">
+					<h3>Last Minute Orders</h3>
+					<p>A rush fee will be added and the order will only be accepted if we are able to squeeze it in our schedule and if the cake design is not complex to meet the quick turnaround time.</p>
+				</div>
+				<div class="mini-card">
+					<h3>Cake Tastings</h3>
+					<p>Tastings are by appointment only, it's a one hour session with our head decorator and it's $30 for two people.</p>
+				</div>
+			</div>
 		</div>
 	</section>
 
@@ -382,6 +414,32 @@
 		background-repeat: no-repeat;
 		background-size: cover;
 		background-position: center bottom;
+	}
+
+	/* GETTING STARTED SECTION */
+	#getting-started{
+		background-color: var(--brown);
+		padding: 3rem 0;
+		margin-bottom: 6rem;
+	}
+	#getting-started h2{
+		margin-bottom: 1.5rem;
+		color: var(--cream);
+	}
+	.mini-card-container{
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		gap: 2rem 4rem;
+	}
+	.mini-card-container .mini-card{
+		width: 29%;
+		padding: 1rem;
+		background-color: var(--cream);
+	}
+	.mini-card-container .mini-card h3{
+		margin-bottom: 1rem;
+		text-align: center;
 	}
 
 </style>
