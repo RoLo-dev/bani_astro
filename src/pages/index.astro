@@ -519,22 +519,28 @@
 		flex-direction: column;
 		gap: 1.25rem 0;
 	}
+	form label{font-weight: 500;}
 	form label, form input, form textarea{
 		width: 100%;
 		display: block;
 		color: #000;
 	}
+	form input, form textarea{
+		font-size: 1.1rem;
+		border: 0;
+		background-color: var(--soft-pink);
+	}
+	form input:active, form textarea:active,
+	form input:focus, form textarea:focus{
+		background-color: #fff;
+	}
 	form input{
 		padding: 0 5px;
 		height: 2.75rem;
-		font-size: 1.1rem;
-		border: 0;
 	}
 	form textarea{
 		height: 10rem;
 		padding: 5px;
-		font-size: 1.1rem;
-		border: 0;
 	}
 	.formSimplify{
 		display: flex;

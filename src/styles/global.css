@@ -2,7 +2,8 @@
     --font-size: 16px;
     --brown: #814d3b;
     --hot-pink: #F7ACB8;
-    --cream: #fff8e8
+    --soft-pink: #ffdddd;
+    --cream: #fff8e8;
 }
 @media (max-width: 700px) {
     :root {
@@ -66,7 +67,7 @@ label, button, a{
 .pink-cta{
     background-color: var(--hot-pink);
     text-decoration: none;
-    border-radius: 30px;
+    border-radius: 7px;
     display: block;
     max-width: 225px;
     min-width: 190px;
@@ -81,9 +82,10 @@ label, button, a{
     content: '';
     width: 0;
     height: 100%;
-    border-radius: 30px;
+    /* height: 3px; */
+    border-radius: 7px;
     position: absolute;
-    top: 0;
+    bottom: 0;
     left: 0;
     background-color: var(--brown);
     transition: all 0.3s ease-in;
@@ -91,10 +93,10 @@ label, button, a{
 .pink-cta::after{
     color: #000;
     width: 100%;
-    height: 100%;
-    border-radius: 30px;
+    height: auto;
     position: absolute;
     top: 30%;
+    /* top: 0; */
     left: 0;
     transition: all 0.4s ease-in;
 }
