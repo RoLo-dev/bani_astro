@@ -42,6 +42,10 @@ a{
     text-decoration: none;
     transition: all 0.2s ease-in-out;
 }
+form, input, textarea,
+label, button, a{
+    font-family: "Red Hat Display", serif;
+}
 .wrapper{
     width: 78%;
     margin: 0 auto;

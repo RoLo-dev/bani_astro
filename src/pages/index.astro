@@ -274,12 +274,14 @@
 						</div>
 					</div>
 
-					<label for="message">Message:</label>
-					<textarea name="message"></textarea>
+					<div>
+						<label for="message">Message:</label>
+						<textarea name="message"></textarea>
+					</div>
 
-					<div data-netlify-recaptcha="true"></div>
+					<!-- <div data-netlify-recaptcha="true"></div> -->
 
-					<div class="submit-btn" onclick="validateForm()">SUBMIT</div>
+					<div class="submit-btn pink-cta" onclick="validateForm()">SUBMIT</div>
 					<input id="validation-complete" type="submit" value="submit" style="display: none;">
 				</form>
 			</div>
@@ -345,7 +347,7 @@
 		gap: 2rem 1.25rem;
 	}
 	.bakery-specialties .card{
-		min-width: 350px;
+		min-width: 400px;
 		width: 29%;
 	}
 	.bakery-specialties .card .img-container{
@@ -506,11 +508,43 @@
 	#contact{margin: 6rem auto;}
 	.contact-container{
 		display: flex;
+		justify-content: space-between;
 	}
 	.contact-container .col h2{margin-bottom: 1.5rem;}
-	.contact-container .col{width: 50%;}
+	.contact-container .col{width: 48%;}
 	.contact-container .col p{line-height: 1.6;}
 	.contact-container .col p:first-of-type{margin-bottom: 1rem;}
+	form{
+		display: flex;
+		flex-direction: column;
+		gap: 1.25rem 0;
+	}
+	form label, form input, form textarea{
+		width: 100%;
+		display: block;
+		color: #000;
+	}
+	form input{
+		padding: 0 5px;
+		height: 2.75rem;
+		font-size: 1.1rem;
+		border: 0;
+	}
+	form textarea{
+		height: 10rem;
+		padding: 5px;
+		font-size: 1.1rem;
+		border: 0;
+	}
+	.formSimplify{
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+	.formSimplify div{width: 48%;}
+	.form-error{display: none;}
+	.submit-btn::after{content: 'SUBMIT';}
+	
 
 	/* ABOUT SECTION */
 	#about{margin-bottom: 6rem;}
