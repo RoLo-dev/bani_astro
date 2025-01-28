@@ -43,6 +43,10 @@ a{
     text-decoration: none;
     transition: all 0.2s ease-in-out;
 }
+a:focus, button:focus, form input:focus{
+    /* padding: 1px; */
+    outline: 1px dotted #000;
+}
 form, input, textarea,
 label, button, a{
     font-family: "Red Hat Display", serif;
