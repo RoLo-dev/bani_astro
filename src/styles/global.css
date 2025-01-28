@@ -5,7 +5,7 @@
     --soft-gray: #eee7e7;
     --cream: #fff8e8;
 }
-@media (max-width: 700px) {
+@media (max-width: 921px) {
     :root {
         --font-size: 14px;
     }
@@ -81,7 +81,6 @@ label, button, a{
     font-weight: 700;
     letter-spacing: 1px;
     position: relative;
-    border: 1px solid var(--brown);
 }
 .pink-cta::before{
     content: '';

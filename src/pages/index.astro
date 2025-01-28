@@ -584,4 +584,20 @@
 		background-size: cover;
 		background-position: center bottom;
 	}
+
+	@media screen and (max-width: 998px){
+		.hero-section{flex-direction: column;}
+		.hero-section .col{width: 100%;}
+		.hero-section .right-col{
+			order: 1;
+			height: 350px;
+			margin-bottom: 1.5rem;
+		}
+		.hero-section .left-col{order: 2;}
+		.hero-section .left-col .hero-text-container{padding-right: 0;}
+		.hero-cta{margin: 0 auto;}
+	}
+	@media screen and (max-width: 920px){
+		
+	}
 </style>
