@@ -344,7 +344,7 @@
 		justify-content: space-evenly;
 		flex-wrap: wrap;
 		/* gap: 2rem 5.625rem; */
-		gap: 2rem 1.25rem;
+		gap: 3rem 1.25rem;
 	}
 	.bakery-specialties .card{
 		min-width: 400px;
@@ -584,7 +584,9 @@
 		background-size: cover;
 		background-position: center bottom;
 	}
-
+	@media screen and (max-width: 1251px){
+		
+	}
 	@media screen and (max-width: 998px){
 		.hero-section{flex-direction: column;}
 		.hero-section .col{width: 100%;}
@@ -598,6 +600,11 @@
 		.hero-cta{margin: 0 auto;}
 	}
 	@media screen and (max-width: 920px){
-		
+		.bakery-specialties .card .img-container{
+			height: 300px;
+		}
+		.bakery-specialties .card .card-text-container{
+			min-height: 150px;
+		}
 	}
 </style>
