@@ -43,9 +43,9 @@ a{
     text-decoration: none;
     transition: all 0.2s ease-in-out;
 }
-a:focus, button:focus, form input:focus{
-    /* padding: 1px; */
-    outline: 1px dotted #000;
+a:focus, button:focus,
+form input:focus, form textarea:focus{
+    outline: 1px dashed #000;
 }
 form, input, textarea,
 label, button, a{
@@ -81,6 +81,7 @@ label, button, a{
     font-weight: 700;
     letter-spacing: 1px;
     position: relative;
+    border: 1px solid var(--brown);
 }
 .pink-cta::before{
     content: '';
