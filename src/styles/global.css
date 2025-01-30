@@ -106,6 +106,6 @@ label, button, a{
 }
 @media (max-width: 480px) {
     :root{--font-size: 12px;}
-    .wrapper{width: 85%;}
+    .wrapper, .small-wrapper{width: 85%;}
     .pink-cta{width: 100%;}
 }
