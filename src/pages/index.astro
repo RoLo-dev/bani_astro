@@ -491,8 +491,8 @@
 	.mini-card-container{
 		display: flex;
 		flex-wrap: wrap;
-		justify-content: space-between;
-		gap: 2rem 4rem;
+		justify-content: space-evenly;
+		gap: 2rem 3rem;
 	}
 	.mini-card-container .mini-card{
 		width: 29%;
@@ -604,6 +604,16 @@
 		.bakery-specialties .card .card-text-container{
 			min-height: 150px;
 		}
+		.mini-card-container .mini-card{width: 45%;}
+		.list-container{
+			flex-direction: column;
+			gap: 2rem 0;
+		}
+		.list-container .img-col{height: 275px;}
+		.list-container .img-col,
+		.list-container .list-col{width: 100%;}
+		.flavors-container .img-col{order: 1;}
+		.flavors-container .list-col{order: 2;}
 	}
 	@media screen and (max-width: 510px){
 		.hero-text-container h1{text-align: center;}
@@ -616,14 +626,6 @@
 			align-items: center;
 		}
 		.bakery-specialties .card .card-cta-container a:first-of-type{margin-bottom: 1rem;}
-		.list-container{
-			flex-direction: column;
-			gap: 2rem 0;
-		}
-		.list-container .img-col{height: 275px;}
-		.list-container .img-col,
-		.list-container .list-col{width: 100%;}
-		.flavors-container .img-col{order: 1;}
-		.flavors-container .list-col{order: 2;}
+		.mini-card-container .mini-card{width: 100%;}
     }
 </style>
