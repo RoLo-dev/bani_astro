@@ -612,8 +612,10 @@
 		.list-container .img-col{height: 275px;}
 		.list-container .img-col,
 		.list-container .list-col{width: 100%;}
-		.flavors-container .img-col{order: 1;}
-		.flavors-container .list-col{order: 2;}
+		.flavors-container .img-col,
+		.contact-container .col:last-of-type{order: 1;}
+		.flavors-container .list-col,
+		.contact-container .col:first-of-type{order: 2;}
 	}
 	@media screen and (max-width: 510px){
 		.hero-text-container h1{text-align: center;}
@@ -626,6 +628,17 @@
 			align-items: center;
 		}
 		.bakery-specialties .card .card-cta-container a:first-of-type{margin-bottom: 1rem;}
-		.mini-card-container .mini-card{width: 100%;}
+		.mini-card-container .mini-card,
+		.contact-container .col,
+		.formSimplify div{width: 100%;}
+		.contact-container{
+			flex-direction: column;
+			gap: 2rem 0;
+		}
+		.formSimplify{
+			flex-direction: column;
+			gap: 1.25rem 0;
+		}
+		form input[type="file"]{padding-top: 10px;}
     }
 </style>
