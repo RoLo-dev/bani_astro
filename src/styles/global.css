@@ -5,14 +5,6 @@
     --soft-gray: #eee7e7;
     --cream: #fff8e8;
 }
-@media (max-width: 921px) {
-    :root{--font-size: 14px;}
-}
-@media (max-width: 480px) {
-    :root{--font-size: 12px;}
-    .wrapper{width: 85%;}
-    .pink-cta{width: 100%;}
-}
 
 *{
     padding: 0;
@@ -106,4 +98,14 @@ label, button, a{
 .pink-cta:hover::after{
     width: 100%;
     color: #fff;
+}
+
+
+@media (max-width: 921px) {
+    :root{--font-size: 14px;}
+}
+@media (max-width: 480px) {
+    :root{--font-size: 12px;}
+    .wrapper{width: 85%;}
+    .pink-cta{width: 100%;}
 }
