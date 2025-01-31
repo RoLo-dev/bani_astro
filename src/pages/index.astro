@@ -625,6 +625,13 @@
 		form input[type="file"]{padding-top: 10px;}
 		.submit-btn{margin: 0 auto;}
 	}
+	@media screen and (max-width: 785px){
+		.about-container{
+			flex-direction: column;
+			gap: 2rem 0;
+		}
+		.about-container .col{width: 100%;}
+	}
 	@media screen and (max-width: 510px){
 		.hero-text-container h1{text-align: center;}
         .bakery-specialties .card{
@@ -637,11 +644,7 @@
 		}
 		.bakery-specialties .card .card-cta-container a:first-of-type{margin-bottom: 1rem;}
 		.mini-card-container .mini-card,
-		.formSimplify div, .about-container .col{width: 100%;}
-		.about-container{
-			flex-direction: column;
-			gap: 2rem 0;
-		}
+		.formSimplify div{width: 100%;}
 		.formSimplify{
 			flex-direction: column;
 			gap: 1.25rem 0;

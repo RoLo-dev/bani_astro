@@ -91,8 +91,6 @@
         position: relative;
         border-bottom: 1px solid var(--hot-pink);
     }
-    .mobile-btn-container, .mobile-social-icons
-    .mobile-close-btn{display: none;}
     .header-container{
         display: flex;
         justify-content: space-between;
@@ -140,10 +138,14 @@
         height: 2px;
     }
     .header-container .logo{width: 200px;display: block;}
+    .mobile-btn-container, .header-container nav ul li.mobile-social-icons,
+    .mobile-close-btn{display: none;}
+
     @media screen and (max-width: 920px){
         .mobile-btn-container,
-        .mobile-social-icons, .mobile-close-btn{display: block;}
-        .header-nav, .header-container .right-panel a{display: none;}
+        .mobile-close-btn{display: block;}
+        .header-container nav ul li.mobile-social-icons{display: inline-block;}
+        .header-container .right-panel a{display: none;}
         .mobile-btn{
             background: transparent;
             border: 0;
@@ -167,9 +169,8 @@
         /* .animate{ transform: rotate(45deg); }
         .animate::before{ opacity: 0; }
         .animate::after{ transform: rotate(90deg) translate(-9px); } */
-        .header-social-media{margin-left: 0;}
-        .mobile-nav ul li a{font-size: 1.25rem;}
-        .mobile-nav nav ul li{margin-bottom: 1rem;}
+        /* .mobile-nav ul li a{font-size: 1.25rem;}
+        .mobile-nav nav ul li{margin-bottom: 1rem;} */
         header{padding: 2rem 0;}
         .header-container .logo{
             position: absolute;
@@ -177,9 +178,8 @@
             margin-left: -100px;
         }
         .header-nav{
-            display: block;
-            position: absolute;
             display: flex;
+            position: fixed;
             justify-content: center;
             align-items: center;
             top: 0;
@@ -189,14 +189,15 @@
             transform: translate(100%, 0px);
             min-height: 450px;
             z-index: 5;
+            opacity: 0;
             background-color: var(--cream);
             transition: all 0.3s ease-in-out;
         }
         .header-nav.show-nav{
-            /* display: block; */
             opacity: 0.95;
             transform: translateY(0px);
         }
+        .header-container nav ul{padding: 4rem 5rem;}
         .header-container nav ul li{
             display: block;
             margin-right: 0;
@@ -236,6 +237,7 @@
 
     hamburgerIcon?.addEventListener('click', toggleNav)
     mobileCloseIcon?.addEventListener('click', toggleNav)
+
     function toggleNav(){
         mobileNav?.classList.toggle('show-nav')
     }

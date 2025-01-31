@@ -107,5 +107,6 @@ label, button, a{
 @media (max-width: 480px) {
     :root{--font-size: 12px;}
     .wrapper, .small-wrapper{width: 85%;}
-    .pink-cta{width: 100%;}
+    .pink-cta{width: 100%;font-size: 1.125rem;}
+    h2{text-align: center;}
 }
