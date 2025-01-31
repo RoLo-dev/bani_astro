@@ -133,8 +133,35 @@
     @media screen and (max-width: 920px){
         .mobile-btn-container{display: block;}
         .header-nav, .header-container .right-panel a{display: none;}
-        .mobile-btn-container,
+        /* .mobile-btn-container,
         .header-container .left-panel,
-        .header-container .right-panel{flex-basis: 1 1 0%;}
+        .header-container .right-panel{flex-basis: 1 1 0%;} */
+        .mobile-btn{
+            background: transparent;
+            border: 0;
+            padding: 1.25rem 0 1.25rem 0.9rem;
+            z-index: 10;
+        }
+        .hamburger-icon{ display: block;position: relative; }
+        .hamburger-icon,
+        .hamburger-icon::before,
+        .hamburger-icon::after{
+            width: 2.25rem;
+            height: 2px;
+            background: #000;
+            border-radius: 30px;
+            transition: transform 300ms ease-in-out, opacity 200ms linear;
+        }
+        .hamburger-icon::before,
+        .hamburger-icon::after{ content: '';position: absolute;left: 0; }
+        .hamburger-icon::before{bottom: 9px;}
+        .hamburger-icon::after{top: 9px;}
+        .animate{ transform: rotate(45deg); }
+        .animate::before{ opacity: 0; }
+        .animate::after{ transform: rotate(90deg) translate(-9px); }
+        .header-social-media{margin-left: 0;}
+        .mobile-nav ul li a{font-size: 1.25rem;}
+        .mobile-nav nav ul li{margin-bottom: 1rem;}
+
     }
 </style>
