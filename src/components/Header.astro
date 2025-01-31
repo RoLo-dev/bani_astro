@@ -21,6 +21,9 @@
             </a>
             <nav class="header-nav">
                 <ul>
+                    <li class="mobile-clos-btn">
+                        <button class="close-btn"><i class="fa-solid fa-xmark"></i></button>
+                    </li>
                     <li>
                         <a href="" class="nav-link-anchor" title="Gallery link" aria-label="Link to gallery page">Gallery</a>
                     </li>
@@ -90,7 +93,8 @@
         position: relative;
         border-bottom: 1px solid var(--hot-pink);
     }
-    .mobile-btn-container, .mobile-social-icons{display: none;}
+    .mobile-btn-container, .mobile-social-icons
+    .mobile-close-btn{display: none;}
     .header-container{
         display: flex;
         justify-content: space-between;
@@ -140,7 +144,7 @@
     .header-container .logo{width: 200px;display: block;}
     @media screen and (max-width: 920px){
         .mobile-btn-container,
-        .mobile-social-icons{display: block;}
+        .mobile-social-icons, .mobile-close-btn{display: block;}
         .header-nav, .header-container .right-panel a{display: none;}
         .mobile-btn{
             background: transparent;
@@ -162,9 +166,9 @@
         .hamburger-icon::after{ content: '';position: absolute;left: 0; }
         .hamburger-icon::before{bottom: 9px;}
         .hamburger-icon::after{top: 9px;}
-        .animate{ transform: rotate(45deg); }
+        /* .animate{ transform: rotate(45deg); }
         .animate::before{ opacity: 0; }
-        .animate::after{ transform: rotate(90deg) translate(-9px); }
+        .animate::after{ transform: rotate(90deg) translate(-9px); } */
         .header-social-media{margin-left: 0;}
         .mobile-nav ul li a{font-size: 1.25rem;}
         .mobile-nav nav ul li{margin-bottom: 1rem;}
@@ -182,7 +186,7 @@
             align-items: center;
             top: 0;
             right: 0;
-            width: 80%;
+            width: 100%;
             height: 100vh;
             z-index: 5;
             background-color: var(--cream);
