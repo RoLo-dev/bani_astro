@@ -182,17 +182,30 @@
             align-items: center;
             top: 0;
             right: 0;
-            width: 75%;
+            width: 80%;
             height: 100vh;
-            z-index: 10;
+            z-index: 5;
             background-color: var(--cream);
         }
         .header-container nav ul li{
             display: block;
             margin-right: 0;
-            margin-bottom: 1rem;
+            margin-bottom: 3rem;
             font-size: 1.75rem;
         }
         .header-container nav ul li:last-child{margin-bottom: 0;}
+        .header-container nav ul li:last-child a{
+            font-size: 2rem;
+            margin-right: 2rem;
+        }
+        .header-container nav ul li:last-child a:last-of-type{margin-right: 0;}
+    }
+    @media screen and (max-width: 400px){
+        .header-container .logo{
+            width: 175px;
+            left: auto;
+            right: 10%;
+            margin-left: 0;
+        }
     }
 </style>
