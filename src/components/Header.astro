@@ -10,6 +10,11 @@
 </div>
 <header>
     <div class="header-container wrapper">
+        <div class="mobile-btn-container">
+            <button class="mobile-btn">
+                <span class="hamburger-icon"></span>
+            </button>
+        </div>
         <div class="left-panel">
             <a href="/" title="Bani Bakery logo" class="logo" aria-label="Logo image, a link to homepage">
                 <img src={textLogo.src} alt="Bani bakery logo" class="pics" />
@@ -77,6 +82,7 @@
         padding: 1.5rem 0;
         border-bottom: 1px solid var(--hot-pink);
     }
+    .mobile-btn-container{display: none;}
     .header-container{
         display: flex;
         justify-content: space-between;
@@ -124,4 +130,11 @@
         height: 2px;
     }
     .header-container .logo{width: 200px;display: block;}
+    @media screen and (max-width: 920px){
+        .mobile-btn-container{display: block;}
+        .header-nav, .header-container .right-panel a{display: none;}
+        .mobile-btn-container,
+        .header-container .left-panel,
+        .header-container .right-panel{flex-basis: 1 1 0%;}
+    }
 </style>
