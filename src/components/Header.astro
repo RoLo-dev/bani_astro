@@ -20,10 +20,8 @@
                 <img src={textLogo.src} alt="Bani bakery logo" class="pics" />
             </a>
             <nav class="header-nav">
+                <button class="mobile-close-btn"><i class="fa-solid fa-xmark"></i></button>
                 <ul>
-                    <li class="mobile-clos-btn">
-                        <button class="close-btn"><i class="fa-solid fa-xmark"></i></button>
-                    </li>
                     <li>
                         <a href="" class="nav-link-anchor" title="Gallery link" aria-label="Link to gallery page">Gallery</a>
                     </li>
@@ -188,14 +186,23 @@
             right: 0;
             width: 100%;
             height: 100vh;
+            transform: translate(100%, 0px);
+            min-height: 450px;
             z-index: 5;
             background-color: var(--cream);
+            transition: all 0.3s ease-in-out;
+        }
+        .header-nav.show-nav{
+            /* display: block; */
+            opacity: 0.95;
+            transform: translateY(0px);
         }
         .header-container nav ul li{
             display: block;
             margin-right: 0;
             margin-bottom: 3rem;
             font-size: 1.75rem;
+            text-align: center;
         }
         .header-container nav ul li:last-child{margin-bottom: 0;}
         .header-container nav ul li:last-child a{
@@ -203,6 +210,15 @@
             margin-right: 2rem;
         }
         .header-container nav ul li:last-child a:last-of-type{margin-right: 0;}
+        .mobile-close-btn{
+            position: absolute;
+            right: 10%;
+            top: 5%;
+            border: 0;
+            padding: 3px 5px;
+            background: transparent;
+            font-size: 1.75rem;
+        }
     }
     @media screen and (max-width: 400px){
         .header-container .logo{
@@ -213,3 +229,14 @@
         }
     }
 </style>
+<script>
+    let mobileNav = document.querySelector('.header-nav');
+    let hamburgerIcon = document.querySelector('.mobile-btn');
+    let mobileCloseIcon = document.querySelector('.mobile-close-btn')
+
+    hamburgerIcon?.addEventListener('click', toggleNav)
+    mobileCloseIcon?.addEventListener('click', toggleNav)
+    function toggleNav(){
+        mobileNav?.classList.toggle('show-nav')
+    }
+</script>
