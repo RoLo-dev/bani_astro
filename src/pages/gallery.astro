@@ -18,10 +18,97 @@ import Layout from '../layouts/Layout.astro';
 	<section class="gallery">
 		<div class="wrapper grid-container">
 			<div class="img-container">
-				<img src="/src/assets/images/gallery-images/image-01.jpg" class="pics" alt="cake or dessert image">
+				<img src="../src/assets/images/gallery-images/image-01.jpg" class="pics" alt="cake or dessert image">
 			</div>
 			<div class="img-container">
-				<img src="/src/assets/images/gallery-images/image-02.jpg" class="pics" alt="cake or dessert image">
+				<img src="../src/assets/images/gallery-images/image-02.jpg" class="pics" alt="cake or dessert image">
+			</div>
+			<div class="img-container">
+				<img src="../src/assets/images/gallery-images/image-03.jpeg" class="pics" alt="cake or dessert image">
+			</div>
+			<div class="img-container wide">
+				<img src="../src/assets/images/gallery-images/image-04.jpeg" class="pics" alt="cake or dessert image">
+			</div>
+			<div class="img-container">
+				<img src="../src/assets/images/gallery-images/image-05.jpeg" class="pics" alt="cake or dessert image">
+			</div>
+			<div class="img-container wide">
+				<img src="../src/assets/images/gallery-images/image-06.jpeg" class="pics" alt="cake or dessert image">
+			</div>
+			<div class="img-container">
+				<img src="../src/assets/images/gallery-images/image-07.jpeg" class="pics" alt="cake or dessert image">
+			</div>
+			<div class="img-container tall">
+				<img src="../src/assets/images/gallery-images/image-08.jpeg" class="pics" alt="cake or dessert image">
+			</div>
+			<div class="img-container">
+				<img src="../src/assets/images/gallery-images/image-09.jpeg" class="pics" alt="cake or dessert image">
+			</div>
+			<div class="img-container">
+				<img src="../src/assets/images/gallery-images/image-10.jpeg" class="pics" alt="cake or dessert image">
+			</div>
+			<div class="img-container">
+				<img src="../src/assets/images/gallery-images/image-11.jpeg" class="pics" alt="cake or dessert image">
+			</div>
+			<div class="img-container">
+				<img src="../src/assets/images/gallery-images/image-12.jpeg" class="pics" alt="cake or dessert image">
+			</div>
+			<div class="img-container">
+				<img src="../src/assets/images/gallery-images/image-13.jpeg" class="pics" alt="cake or dessert image">
+			</div>
+			<div class="img-container">
+				<img src="../src/assets/images/gallery-images/image-14.jpeg" class="pics" alt="cake or dessert image">
+			</div>
+			<div class="img-container tall">
+				<img src="../src/assets/images/gallery-images/image-15.jpg" class="pics" alt="cake or dessert image">
+			</div>
+			<div class="img-container">
+				<img src="../src/assets/images/gallery-images/image-16.jpg" class="pics" alt="cake or dessert image">
+			</div>
+			<div class="img-container">
+				<img src="../src/assets/images/gallery-images/image-17.jpeg" class="pics" alt="cake or dessert image">
+			</div>
+			<div class="img-container wide">
+				<img src="../src/assets/images/gallery-images/image-18.jpg" class="pics" alt="cake or dessert image">
+			</div>
+			<div class="img-container">
+				<img src="../src/assets/images/gallery-images/image-19.jpg" class="pics" alt="cake or dessert image">
+			</div>
+			<div class="img-container">
+				<img src="../src/assets/images/gallery-images/image-20.jpeg" class="pics" alt="cake or dessert image">
+			</div>
+			<div class="img-container">
+				<img src="../src/assets/images/gallery-images/image-21.jpg" class="pics" alt="cake or dessert image">
+			</div>
+			<div class="img-container">
+				<img src="../src/assets/images/gallery-images/image-22.jpg" class="pics" alt="cake or dessert image">
+			</div>
+			<div class="img-container">
+				<img src="../src/assets/images/gallery-images/image-21.jpg" class="pics" alt="cake or dessert image">
+			</div>
+			<div class="img-container">
+				<img src="../src/assets/images/gallery-images/image-21.jpg" class="pics" alt="cake or dessert image">
+			</div>
+			<div class="img-container">
+				<img src="../src/assets/images/gallery-images/image-21.jpg" class="pics" alt="cake or dessert image">
+			</div>
+			<div class="img-container">
+				<img src="../src/assets/images/gallery-images/image-21.jpg" class="pics" alt="cake or dessert image">
+			</div>
+			<div class="img-container">
+				<img src="../src/assets/images/gallery-images/image-21.jpg" class="pics" alt="cake or dessert image">
+			</div>
+			<div class="img-container">
+				<img src="../src/assets/images/gallery-images/image-21.jpg" class="pics" alt="cake or dessert image">
+			</div>
+			<div class="img-container">
+				<img src="../src/assets/images/gallery-images/image-21.jpg" class="pics" alt="cake or dessert image">
+			</div>
+			<div class="img-container">
+				<img src="../src/assets/images/gallery-images/image-21.jpg" class="pics" alt="cake or dessert image">
+			</div>
+			<div class="img-container">
+				<img src="../src/assets/images/gallery-images/image-21.jpg" class="pics" alt="cake or dessert image">
 			</div>
 		</div>
 	</section>
@@ -29,5 +116,21 @@ import Layout from '../layouts/Layout.astro';
 	<Footer />
 </Layout>
 <style>
-
+	.grid-container{
+		display: grid;
+		gap: 10px;
+		grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+		grid-auto-rows: 300px;
+		grid-auto-flow: dense;
+	}
+	.grid-container .wide{
+		grid-column: span 2;
+	}
+	.grid-container .tall{
+		grid-row: span 2;
+	}
+	.grid-container .big{
+		grid-row: span 2;
+		grid-column: span 2;
+	}
 </style>
