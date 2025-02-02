@@ -5,7 +5,7 @@
 <div class="alert-banner">
     <div class="wrapper">
         <p>No walk-ins, appointment only</p>
-        <button class="close-btn"><i class="fa-solid fa-xmark"></i></button>
+        <button class="alert-close-btn"><i class="fa-solid fa-xmark"></i></button>
     </div>
 </div>
 <header>
@@ -74,7 +74,7 @@
     .alert-banner div{
         position: relative;
     }
-    .alert-banner .close-btn{
+    .alert-banner .alert-close-btn{
         color: #000;
         background: 0;
         padding: 4px;
@@ -241,4 +241,7 @@
     function toggleNav(){
         mobileNav?.classList.toggle('show-nav')
     }
+    document.querySelector('.alert-close-btn')?.addEventListener('click', () =>{
+        document.querySelector('.alert-banner').style.display = 'none';
+    })
 </script>
