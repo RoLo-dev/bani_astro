@@ -439,6 +439,14 @@ import Layout from '../layouts/Layout.astro';
 	.prev{left: 10px;}
 	.next{right: 10px;}
 	.prev:hover, .next:hover{color: var(--hot-pink);}
+	@media screen and (max-width: 920px){
+		.prev, .next{
+			top: auto;
+			bottom: 4%;
+		}
+		.prev{left: 35%;}
+		.next{right: 35%;}
+	}
 
 </style>
 <script>
