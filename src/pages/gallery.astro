@@ -364,11 +364,23 @@ import Layout from '../layouts/Layout.astro';
 	<div id="lightbox" class="lightbox">
 		<button class="lightbox-close-btn"><i class="fa-solid fa-xmark"></i></button>
 		<img loading="lazy" class="lightbox-img" id="lightbox-img">
+		<button class="prev">&#10094;</button>
+        <button class="next">&#10095;</button>
 	</div>
 
 	<Footer />
 </Layout>
 <style>
+	.img-container{
+		cursor: pointer;
+		overflow: hidden;
+	}
+	.img-container img{
+		transition: all 0.2s ease-in-out;
+	}
+	.img-container img:hover {
+		transform: scale(1.1);
+	}
 	.grid-container{
 		display: grid;
 		gap: 10px;
@@ -394,24 +406,43 @@ import Layout from '../layouts/Layout.astro';
 		width: 100%;
 		height: 100%;
 		background: rgba(0, 0, 0, 0.8);
-		/* display: flex; */
 		justify-content: center;
 		align-items: center;
+		flex-direction: column;
 	}
 	.lightbox-img{
 		max-width: 90%;
 		max-height: 80%;
 		border-radius: 8px;
 	}
-	.lightbox-close-btn{
-		position: absolute;
+	.lightbox button{
 		background: transparent;
 		border: 0;
+	}
+	.lightbox-close-btn{
+		position: absolute;
 		top: 20px;
 		right: 30px;
 		font-size: 40px;
 		color: white;
 		cursor: pointer;
+	}
+	.prev, .next {
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		font-size: 40px;
+		color: white;
+		cursor: pointer;
+		padding: 10px;
+		user-select: none;
+	}
+	.prev{left: 10px;}
+	.next{right: 10px;}
+
+	/* Hover Effect for Arrows */
+	.prev:hover, .next:hover {
+		color: #ddd;
 	}
 
 </style>
