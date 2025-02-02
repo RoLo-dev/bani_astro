@@ -360,6 +360,11 @@ import Layout from '../layouts/Layout.astro';
 				<img src="../src/assets/images/gallery-images/image-116.jpeg" class="pics" alt="cake or dessert image">
 			</div>
 		</div>
+
+		<div id="lightbox" class="lightbox">
+			<button class="close"><i class="fa-solid fa-xmark"></i></button>
+			<img class="lightbox-img" id="lightbox-img">
+		</div>
 	</section>
 
 	<Footer />
@@ -383,21 +388,34 @@ import Layout from '../layouts/Layout.astro';
 		grid-column: span 2;
 	}
 </style>
-<!-- <script>
-	let imgContainer = document.querySelectorAll('.img-container');
+<script>
+	let galleryItems = document.querySelectorAll('.img-container');
+	let lightbox = document.getElementById('lightbox');
+	let lightboxImg = document.getElementById('lightbox-img');
 
-	imgContainer.forEach(element => {
-		element.addEventListener('mouseenter', () => {
-			expandImg(event);
+	galleryItems.forEach(item => {
+		item.addEventListener('click', () => {
+			if(!lightbox){
+				lightbox.style.display = 'flex';
+			}
+			if(!lightboxImg){
+				lightboxImg.src = item.src;
+			}
 		});
 	});
-	imgContainer.forEach(element => {
-		element.addEventListener('mouseleave', () => {
-			expandImg(event);
-		});
-	});
 
-	function expandImg(event){
-		event.target.classList.toggle('big')
-	}
-</script> -->
+	// imgContainer.forEach(element => {
+	// 	element.addEventListener('mouseenter', () => {
+	// 		expandImg(event);
+	// 	});
+	// });
+	// imgContainer.forEach(element => {
+	// 	element.addEventListener('mouseleave', () => {
+	// 		expandImg(event);
+	// 	});
+	// });
+
+	// function expandImg(event){
+	// 	event.target.classList.toggle('big')
+	// }
+</script>
