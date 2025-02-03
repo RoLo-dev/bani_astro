@@ -2,6 +2,24 @@
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import Layout from '../layouts/Layout.astro';
+
+import image100 from '../assets/images/gallery-images/image-100.jpeg';
+import image101 from '../assets/images/gallery-images/image-101.jpg';
+import image102 from '../assets/images/gallery-images/image-102.jpeg';
+import image103 from '../assets/images/gallery-images/image-103.jpeg';
+import image104 from '../assets/images/gallery-images/image-104.jpeg';
+import image105 from '../assets/images/gallery-images/image-105.jpg';
+import image106 from '../assets/images/gallery-images/image-106.jpg';
+import image107 from '../assets/images/gallery-images/image-107.jpg';
+import image108 from '../assets/images/gallery-images/image-108.jpg';
+import image109 from '../assets/images/gallery-images/image-109.jpg';
+import image110 from '../assets/images/gallery-images/image-110.jpeg';
+import image111 from '../assets/images/gallery-images/image-111.jpeg';
+import image112 from '../assets/images/gallery-images/image-112.jpeg';
+import image113 from '../assets/images/gallery-images/image-113.jpeg';
+import image114 from '../assets/images/gallery-images/image-114.jpeg';
+import image115 from '../assets/images/gallery-images/image-115.jpeg';
+import image116 from '../assets/images/gallery-images/image-116.jpeg';
 ---
 
 <Layout>
@@ -311,55 +329,55 @@ import Layout from '../layouts/Layout.astro';
 				<img loading="lazy" src="../assets/images/gallery-images/image-99.jpeg" class="pics" alt="cake or dessert image">
 			</div>
 			<div class="img-container">
-				<img loading="lazy" src="../assets/images/gallery-images/image-100.jpeg" class="pics" alt="cake or dessert image">
+				<img loading="lazy" src={image100.src} class="pics" alt="cake or dessert image">
 			</div>
 			<div class="img-container">
-				<img loading="lazy" src="../assets/images/gallery-images/image-101.jpg" class="pics" alt="cake or dessert image">
+				<img loading="lazy" src={image101.src} class="pics" alt="cake or dessert image">
 			</div>
 			<div class="img-container">
-				<img loading="lazy" src="../assets/images/gallery-images/image-102.jpeg" class="pics" alt="cake or dessert image">
+				<img loading="lazy" src={image102.src} class="pics" alt="cake or dessert image">
 			</div>
 			<div class="img-container">
-				<img loading="lazy" src="../assets/images/gallery-images/image-103.jpeg" class="pics" alt="cake or dessert image">
+				<img loading="lazy" src={image103.src} class="pics" alt="cake or dessert image">
 			</div>
 			<div class="img-container">
-				<img loading="lazy" src="../assets/images/gallery-images/image-104.jpeg" class="pics" alt="cake or dessert image">
+				<img loading="lazy" src={image104.src} class="pics" alt="cake or dessert image">
 			</div>
 			<div class="img-container">
-				<img loading="lazy" src="../assets/images/gallery-images/image-105.jpg" class="pics" alt="cake or dessert image">
+				<img loading="lazy" src={image105.src} class="pics" alt="cake or dessert image">
 			</div>
 			<div class="img-container">
-				<img loading="lazy" src="../assets/images/gallery-images/image-106.jpg" class="pics" alt="cake or dessert image">
+				<img loading="lazy" src={image106.src} class="pics" alt="cake or dessert image">
 			</div>
 			<div class="img-container">
-				<img loading="lazy" src="../assets/images/gallery-images/image-107.jpg" class="pics" alt="cake or dessert image">
+				<img loading="lazy" src={image107.src} class="pics" alt="cake or dessert image">
 			</div>
 			<div class="img-container">
-				<img loading="lazy" src="../assets/images/gallery-images/image-108.jpg" class="pics" alt="cake or dessert image">
+				<img loading="lazy" src={image108.src} class="pics" alt="cake or dessert image">
 			</div>
 			<div class="img-container">
-				<img loading="lazy" src="../assets/images/gallery-images/image-109.jpg" class="pics" alt="cake or dessert image">
+				<img loading="lazy" src={image109.src} class="pics" alt="cake or dessert image">
 			</div>
 			<div class="img-container">
-				<img loading="lazy" src="../assets/images/gallery-images/image-110.jpeg" class="pics" alt="cake or dessert image">
+				<img loading="lazy" src={image110.src} class="pics" alt="cake or dessert image">
 			</div>
 			<div class="img-container">
-				<img loading="lazy" src="../assets/images/gallery-images/image-111.jpeg" class="pics" alt="cake or dessert image">
+				<img loading="lazy" src={image111.src} class="pics" alt="cake or dessert image">
 			</div>
 			<div class="img-container">
-				<img loading="lazy" src="../assets/images/gallery-images/image-112.jpeg" class="pics" alt="cake or dessert image">
+				<img loading="lazy" src={image112.src} class="pics" alt="cake or dessert image">
 			</div>
 			<div class="img-container">
-				<img loading="lazy" src="../assets/images/gallery-images/image-113.jpeg" class="pics" alt="cake or dessert image">
+				<img loading="lazy" src={image113.src} class="pics" alt="cake or dessert image">
 			</div>
 			<div class="img-container">
-				<img loading="lazy" src="../assets/images/gallery-images/image-114.jpeg" class="pics" alt="cake or dessert image">
+				<img loading="lazy" src={image114.src} class="pics" alt="cake or dessert image">
 			</div>
 			<div class="img-container">
-				<img loading="lazy" src="../assets/images/gallery-images/image-115.jpeg" class="pics" alt="cake or dessert image">
+				<img loading="lazy" src={image115.src} class="pics" alt="cake or dessert image">
 			</div>
 			<div class="img-container">
-				<img loading="lazy" src="../assets/images/gallery-images/image-116.jpeg" class="pics" alt="cake or dessert image">
+				<img loading="lazy" src={image116.src} class="pics" alt="cake or dessert image">
 			</div>
 		</div>
 	</section>
@@ -523,18 +541,6 @@ import Layout from '../layouts/Layout.astro';
 	let closeButton = document.querySelector('.lightbox-close-btn');
 	let prevButton = document.querySelector('.prev');
 	let nextButton = document.querySelector('.next');
-
-	// galleryItems.forEach(item => {
-	// 	item.addEventListener('click', () => {
-	// 		lightbox.style.display = 'flex';
-	// 		let imgSrc = item.getAttribute('src');
-	// 		lightboxImg?.setAttribute('src', imgSrc);
-	// 	});
-	// });
-
-	// closeButton.addEventListener('click', () => {
-	// 	lightbox.style.display = 'none';
-	// });
 	
 	let currentIndex = 0;
 	function openLightbox(index) {
