@@ -9,7 +9,9 @@ import Layout from '../layouts/Layout.astro';
 
 	<div class="hero-section wrapper">
 		<div class="left-col col">
-            <div class="text-container">
+            <div class="hero-text-container">
+				<h1>Gallery</h1>
+				<p>Check out our beautiful custom cakes and pastries that we have made for many wonderful customers. Each cake uniquely designed and crafted for each customer, no cake ends up looking the same.</p>
             </div>
         </div>
         <div class="right-col col"></div>
@@ -376,6 +378,38 @@ import Layout from '../layouts/Layout.astro';
 	<Footer />
 </Layout>
 <style>
+	/* HERO SECTION */
+	.hero-section{display: flex;margin-bottom: 6rem;}
+	.hero-section .col{width: 50%;}
+	.hero-section .left-col{
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+	.hero-section .left-col .hero-text-container{
+		padding-right: 5rem;
+	}
+	.hero-text-container h1{
+		font-size: 4rem;
+		margin-bottom: 3rem;
+		line-height: 1.125;
+	}
+	.hero-text-container p{
+		font-size: 1.25rem;
+		margin-bottom: 3rem;
+	}
+	.hero-text-container .hero-cta::after{
+		content: 'Get Started';
+	}
+	.hero-section .right-col{
+		height: 650px;
+		background-image: url('../assets/images/sweet_table_02.jpg');
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: cover;
+	}
+
+
 	.img-container{
 		cursor: pointer;
 		overflow: hidden;
@@ -457,6 +491,18 @@ import Layout from '../layouts/Layout.astro';
 		.prev{left: 35%;}
 		.next, .lightbox-close-btn{right: 35%;}
 	}
+	@media screen and (max-width: 998px){
+		.hero-section{flex-direction: column;}
+		.hero-section .col{width: 100%;}
+		.hero-section .right-col{
+			order: 1;
+			height: 350px;
+			margin-bottom: 1.5rem;
+		}
+		.hero-section .left-col{order: 2;}
+		.hero-section .left-col .hero-text-container{padding-right: 0;}
+		.hero-cta{margin: 0 auto;}
+	}
 	@media screen and (max-width: 920px){
 		.prev, .next{
 			top: auto;
@@ -464,6 +510,9 @@ import Layout from '../layouts/Layout.astro';
 		}
 		.prev{left: 35%;}
 		.next{right: 35%;}
+	}
+	@media screen and (max-width: 510px){
+		.hero-text-container h1{text-align: center;}
 	}
 
 </style>
