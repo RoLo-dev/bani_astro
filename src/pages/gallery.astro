@@ -368,6 +368,11 @@ import Layout from '../layouts/Layout.astro';
         <button class="next">&#10095;</button>
 	</div>
 
+	<div class="small-wrapper cta-container">
+		<p>Ready to order, send us a message or give us a call</p>
+		<a href="/#contact" class="pink-cta contact-cta" title="Contact Us" aria-label="Contact us link">Contact Us</a>
+	</div>
+
 	<Footer />
 </Layout>
 <style>
@@ -439,6 +444,19 @@ import Layout from '../layouts/Layout.astro';
 	.prev{left: 10px;}
 	.next{right: 10px;}
 	.prev:hover, .next:hover{color: var(--hot-pink);}
+	.cta-container{
+		margin-top: 4rem;
+		margin-bottom: 4rem;
+		text-align: center;
+	}
+	.cta-container p{font-size: 1.25rem;margin-bottom: 2rem;}
+	.cta-container a{margin: 0 auto;}
+	.contact-cta::after{content: 'Contact Us';}
+
+	@media screen and (min-width: 1600px){
+		.prev{left: 35%;}
+		.next, .lightbox-close-btn{right: 35%;}
+	}
 	@media screen and (max-width: 920px){
 		.prev, .next{
 			top: auto;
