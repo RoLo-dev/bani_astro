@@ -263,9 +263,7 @@
 						<textarea name="message"></textarea>
 					</div>
 
-					<!-- <div data-netlify-recaptcha="true"></div> -->
-
-					<button class="submit-btn pink-cta" onclick="validateForm()">SUBMIT</button>
+					<button class="submit-btn pink-cta" >SUBMIT</button>
 					<input id="validation-complete" type="submit" value="submit" style="display: none;">
 				</form>
 			</div>
@@ -637,5 +635,32 @@
     }
 </style>
 <script>
+	let form = document.getElementById('contact-form');
+	let nameValue = document.getElementById('name')
+	let emailInput = document.getElementById('email');
+	let emailConfirm = document.getElementById('emailConfirm');
+	let emailErrorMsg = document.getElementById('email-errorMsg')
+	let emailConfirmErrorMsg = document.getElementById('emailConfirm-errorMsg');
+	let subject = document.getElementById("subject")
 
+	document.querySelector('.submit-btn')?.addEventListener('click', validateForm)
+	document.querySelector('.submit-btn')?.addEventListener('keydown', (event) =>{
+		if(event.key == 13){
+			validateForm();
+		}
+	});
+
+
+	function validateForm() {
+		if (emailInput.value == '') {
+			emailErrorMsg.style.display = 'block';
+		}
+		if (emailConfirm.value != emailInput.value) {
+			emailConfirmErrorMsg.style.display = 'block';
+		}
+		else {
+			subject.setAttribute('value', 'New email from ' + nameValue.value)
+			document.getElementById('validation-complete').click()
+		}
+	}
 </script>
