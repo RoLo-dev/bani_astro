@@ -70,6 +70,7 @@ label, button, a{
     text-align: center;
     color: transparent;
     font-weight: 700;
+    width: auto;
     letter-spacing: 1px;
     position: relative;
 }
