@@ -676,14 +676,12 @@
 			emailConfirmErrorMsg.style.display = 'block';
 		}
 		else{
-			if(!timeInput){
-				timeInput.addEventListener("change", function() {
-					let timeInput = this.value; 
-					let formattedTime = formatTime12Hour(timeInput);
-					console.log(formattedTime);
-					timeInput.value = formattedTime;
-				});
-			}
+			// timeInput.addEventListener("change", function() {
+				let timeInputVal = this.value;
+				let formattedTime = formatTime12Hour(timeInputVal);
+				console.log(formattedTime);
+				timeInput.value = formattedTime;
+			// });
 			subject.setAttribute('value', 'New email from ' + nameValue.value)
 			document.getElementById('validation-complete').click()
 		}
