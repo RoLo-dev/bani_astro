@@ -249,7 +249,7 @@
 						<div>
 							<label for="time">Pickup Time:</label>
 							<span id="time-errorMsg" class="form-error">Enter pickup time</span>
-							<input id="time" type="time">
+							<input id="time" type="time" name="">
 							<input type="hidden" id="formattedTime" name="time">
 						</div>
 					</div>
@@ -677,7 +677,7 @@
 			emailConfirmErrorMsg.style.display = 'block';
 		}
 		else{
-			let timeInputVal = this.value;
+			let timeInputVal = timeInput.value;
 			let formattedTime = formatTime12Hour(timeInputVal);
 			console.log(formattedTime);
 			document.getElementById("formattedTime").value = formattedTime;
