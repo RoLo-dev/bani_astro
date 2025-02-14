@@ -652,6 +652,7 @@
 	let emailErrorMsg = document.getElementById('email-errorMsg')
 	let emailConfirmErrorMsg = document.getElementById('emailConfirm-errorMsg');
 	let subject = document.getElementById("subject")
+	let timeInput = document.getElementById("time")
 
 	document.querySelector('.submit-btn')?.addEventListener('click', validateForm)
 	document.querySelector('.submit-btn')?.addEventListener('keydown', (event) =>{
@@ -660,6 +661,12 @@
 		}
 	});
 
+	function formatTime12Hour(time) {
+		let [hours, minutes] = time.split(":").map(Number);
+		let amPm = hours >= 12 ? "PM" : "AM";
+		hours = hours % 12 || 12;
+		return `${hours}:${minutes.toString().padStart(2, "0")} ${amPm}`;
+	}
 
 	function validateForm() {
 		if (emailInput.value == '') {
@@ -668,9 +675,20 @@
 		if (emailConfirm.value != emailInput.value) {
 			emailConfirmErrorMsg.style.display = 'block';
 		}
-		else {
+		else{
+			if(!timeInput){
+				timeInput.addEventListener("change", function() {
+					let timeInput = this.value; 
+					let formattedTime = formatTime12Hour(timeInput);
+					console.log(formattedTime);
+					timeInput.value = formattedTime;
+				});
+			}
 			subject.setAttribute('value', 'New email from ' + nameValue.value)
 			document.getElementById('validation-complete').click()
 		}
 	}
+
+	
+
 </script>
