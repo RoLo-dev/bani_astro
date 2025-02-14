@@ -249,7 +249,8 @@
 						<div>
 							<label for="time">Pickup Time:</label>
 							<span id="time-errorMsg" class="form-error">Enter pickup time</span>
-							<input id="time" type="time" name="time">
+							<input id="time" type="time">
+							<input type="hidden" id="formattedTime" name="time">
 						</div>
 					</div>
 
@@ -676,12 +677,10 @@
 			emailConfirmErrorMsg.style.display = 'block';
 		}
 		else{
-			// timeInput.addEventListener("change", function() {
-				let timeInputVal = this.value;
-				let formattedTime = formatTime12Hour(timeInputVal);
-				console.log(formattedTime);
-				timeInput.value = formattedTime;
-			// });
+			let timeInputVal = this.value;
+			let formattedTime = formatTime12Hour(timeInputVal);
+			console.log(formattedTime);
+			document.getElementById("formattedTime").value = formattedTime;
 			subject.setAttribute('value', 'New email from ' + nameValue.value)
 			document.getElementById('validation-complete').click()
 		}
