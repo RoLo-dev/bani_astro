@@ -32,6 +32,12 @@
 </section>
 
 <style>
+    .bold-highlight{
+        font-weight: 700;
+        background-color: var(--cream);
+        color: var(--brown);
+        padding: 3px 5px;
+    }
     .bakery-info{
         margin-top: 6rem;
         background-color: var(--brown);
@@ -57,6 +63,7 @@
         width: 100%;
         height: 100%;
     }
+    #current-storeHours{font-size: 2rem;}
     .bakery-sub-container .inner-col{width: 50%;}
     .bakery-sub-container h2{width: 100%;margin-bottom: 1.5rem;}
     .bakery-sub-container .inner-col h3{margin-bottom: 12px;}
@@ -111,36 +118,36 @@
 
     switch(today){
         case 0:
-            document.querySelector('.sunday').classList.toggle('bold')
+            document.querySelector('.sunday').classList.toggle('bold-highlight')
             timeString = sunday.split('-');
             break;
         case 1:
-            document.querySelector('.monday').classList.toggle('bold')
+            document.querySelector('.monday').classList.toggle('bold-highlight')
             timeString = 'Store Closed';
             hoursPlaceholder.innerHTML = 'Closed Today';
             hoursPlaceholder.style.color = '#F7ACB8';
             break;
         case 2:
-            document.querySelector('.tuesday').classList.toggle('bold')
+            document.querySelector('.tuesday').classList.toggle('bold-highlight')
             // timeString = tuesday.split('-');
             timeString = 'Store Closed';
             hoursPlaceholder.innerHTML = 'Closed Today';
             hoursPlaceholder.style.color = '#F7ACB8';
             break;
         case 3:
-            document.querySelector('.wednesday').classList.toggle('bold')
+            document.querySelector('.wednesday').classList.toggle('bold-highlight')
             timeString = wednesday.split('-');
             break;
         case 4:
-            document.querySelector('.thursday').classList.toggle('bold')
+            document.querySelector('.thursday').classList.toggle('bold-highlight')
             timeString = thursday.split('-');
             break;
         case 5:
-            document.querySelector('.friday').classList.toggle('bold')
+            document.querySelector('.friday').classList.toggle('bold-highlight')
             timeString = friday.split('-');
             break;
         case 6:
-            document.querySelector('.saturday').classList.toggle('bold')
+            document.querySelector('.saturday').classList.toggle('bold-highlight')
             timeString = saturday.split('-');
             break;
     }
